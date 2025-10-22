@@ -7,7 +7,9 @@ const NavBar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "text-sm md:text-base text-primary font-semibold" : "text-base-content text-sm md:text-base font-semibold"
+            isActive
+              ? "text-sm md:text-base text-primary font-semibold"
+              : "text-base-content text-sm md:text-base font-semibold"
           }
         >
           Home
@@ -17,7 +19,9 @@ const NavBar = () => {
         <NavLink
           to="/services"
           className={({ isActive }) =>
-            isActive ? "text-sm md:text-base text-primary font-semibold underline" : "text-base-content text-sm md:text-base font-semibold"
+            isActive
+              ? "text-sm md:text-base text-primary font-semibold underline"
+              : "text-base-content text-sm md:text-base font-semibold"
           }
         >
           Services
@@ -27,7 +31,9 @@ const NavBar = () => {
         <NavLink
           to="/profile"
           className={({ isActive }) =>
-            isActive ? "text-sm md:text-base text-primary font-semibold" : "text-base-content text-sm md:text-base font-semibold"
+            isActive
+              ? "text-sm md:text-base text-primary font-semibold"
+              : "text-base-content text-sm md:text-base font-semibold"
           }
         >
           My Profile
@@ -66,23 +72,6 @@ const NavBar = () => {
               {links}
             </ul>
           </div>
-
-          {/* ------ Logo with title ------- */}
-          <div>
-            <Link to="/" className="flex items-center justify-center gap-1">
-              <h1 className="text-xl md:text-2xl font-bold md:font-extrabold pb-1 md:pb-3">
-                Warm
-              </h1>
-              <img
-                className="w-8 md:w-10"
-                src="https://i.ibb.co.com/LdGhbNSk/logo.png"
-                alt=""
-              />
-              <h1 className="text-xl md:text-2xl font-bold md:font-extrabold pt-1 md:pt-3">
-                Paws
-              </h1>
-            </Link>
-          </div>
         </div>
 
         {/* ------------------- Center --------------------- */}
@@ -94,8 +83,8 @@ const NavBar = () => {
         <div className="navbar-end">
           <div className="flex items-center md:gap-3">
             <div>
-                <img src="" alt="" srcset="" />
-                <h3>User</h3>
+              <img src="" alt="" srcset="" />
+              <h3>User</h3>
             </div>
             <Link to="/auth/login">Login</Link>
           </div>
