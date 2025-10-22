@@ -10,6 +10,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        loader: ()=> fetch("/PetServices.json"),
         Component: Home,
       },
       {
@@ -18,8 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/service_details/:id",
-        
-      }
+      },
     ],
   },
   {
