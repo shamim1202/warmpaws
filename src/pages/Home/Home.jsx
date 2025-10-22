@@ -5,7 +5,7 @@ import WinterCareTips from "../../components/WinterCareTips/WinterCareTips";
 import Services from "../Services/Services";
 
 const Home = () => {
-  const services = useLoaderData()
+  const services = useLoaderData();
   return (
     <div className="max-w-7xl mx-auto">
       <Services></Services>

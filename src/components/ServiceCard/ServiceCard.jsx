@@ -1,32 +1,59 @@
 import { Link } from "react-router";
 
-const ServiceCard = ({ data }) => {
-  const { serviceId, image, serviceName, rating, price } = data;
+const ServiceCard = ({ service }) => {
+  const {
+    serviceId,
+    image,
+    serviceName,
+    description,
+    rating,
+    price,
+    providerName,
+    category,
+  } = service;
   return (
     <div className="card bg-base-100 shadow-md hover:shadow-xl transition rounded-lg overflow-hidden">
       {/* Image */}
       <img src={image} alt={serviceName} className="w-full h-56 object-cover" />
 
-      {/* Card content */}
-      <div className="p-3 md:p-6 flex flex-col gap-3 md:gap-5 h-full">
+      {/* ----------------- Card content ------------------- */}
+      <div className="p-3 md:p-6 flex flex-col gap-2 md:gap-4 h-full">
         <div>
-          <h3 className="text-lg font-semibold mb-2">{serviceName}</h3>
+          <h3 className="md:text-xl font-semibold mb-2">{serviceName}</h3>
 
-          {/* Rating */}
+          <span className="p-1 md:px-2 md:py-1.5 rounded bg-green-200 w-auto font-medium">{category}</span>
+
+          <p className="text-gray-600 text-sm md:text-base md:mt-2">
+            {description.split(" ").length > 40
+              ? description.split(" ").slice(0, 40).join(" ") + "..."
+              : description}
+          </p>
+        </div>
+
+        <div>
+          <p className="text-gray-700 font-semibold text-sm md:text-base">
+            Provider: <span className="font-normal">{providerName}</span>
+          </p>
+        </div>
+
+        <div className="flex items-center justify-between">
+          {/* ------------------ Price ------------------*/}
+          <p className="text-gray-700 font-semibold text-sm md:text-base">
+            Price : ${price}
+          </p>
+
+          {/* ------------------- Rating ----------------- */}
           <div className="flex items-center mb-2">
             {Array.from({ length: 5 }).map((_, index) => (
               <span key={index} className={`text-yellow-400`}>
-                {index < data.rating ? "★" : "☆"}
+                {index < service.rating ? "★" : "☆"}
               </span>
             ))}
             <span className="ml-2 text-gray-500 text-sm">({rating})</span>
           </div>
-
-          {/* Price */}
-          <p className="text-gray-700 font-semibold">${price}</p>
         </div>
 
-        {/* View Details button */}
+        {/* ------------ View Details button------------- */}
         <Link
           to={`/service_details/${serviceId}`}
           className="btn btn-primary w-full text-center"

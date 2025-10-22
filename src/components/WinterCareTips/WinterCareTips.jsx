@@ -38,7 +38,7 @@ const WinterCareTips = () => {
     <div className="md:pt-10">
       <section className="max-w-7xl mx-auto px-4 md:px-0 py-10">
         <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-6">
-          Winter Care Tips for Your Pets 🐾
+          Winter Care Tips for Your Pets 💡
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
