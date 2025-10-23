@@ -92,7 +92,6 @@ const NavBar = () => {
                 className="md:w-10"
                 src="https://i.ibb.co.com/3YyzRrk9/user.png"
                 alt=""
-                srcset=""
               />
             </div>
             <Link to="/auth/login">Login</Link>

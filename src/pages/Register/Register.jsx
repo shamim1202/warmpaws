@@ -1,26 +1,48 @@
-import { useContext } from "react";
-import { Link } from "react-router";
+import { useContext, useState } from "react";
+import toast from "react-hot-toast";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
   const { setUser, createUser } = useContext(AuthContext);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
+    setLoading(true);
+
     const form = e.target;
     const name = form.name.value;
     const photo = form.photo_url.value;
     const email = form.email.value;
     const password = form.password.value;
     console.log({ name, photo, email, password });
+
+    if (name.length < 4) {
+      toast.error("Name must be at least 4 characters long!");
+      setLoading(false);
+      return;
+    }
+
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters long!");
+      setLoading(false);
+      return;
+    }
+
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
+        toast.success(`Welcome, ${name}! 🎉`);
+        setLoading(false);
+        navigate("/");
       })
       .catch((error) => {
-        const message = error.message;
-        console.log(message);
+        const code = error.code;
+        toast.error(`${code}Registration failed! Please try again.`);
+        setLoading(false);
       });
   };
   return (
@@ -132,9 +154,14 @@ const Register = () => {
 
             <button
               type="submit"
-              className="btn btn-primary btn-outline mt-5 w-full"
+              className={`btn btn-primary btn-outline mt-5 w-full ${
+                loading
+                  ? "animate__animated animate__pulse animate__infinite"
+                  : ""
+              }`}
+              disabled={loading}
             >
-              Register Now
+              {loading ? "Registering..." : "Register Now"}
             </button>
           </fieldset>
 
