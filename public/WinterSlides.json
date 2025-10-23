@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Warm & Fuzzy Friends",
+    "desc": "Keep your pets cozy and happy this winter with love and care.",
+    "img": "https://i.ibb.co.com/1YYTMDkV/warm-and-fuzzy-friends.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Cozy Companions",
+    "desc": "Snuggle-ready pets showing off their winter fashion.",
+    "img": "https://i.ibb.co.com/Ndx3QXn7/Cozy-Companions.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Paw-some Warmth",
+    "desc": "From fluffy sweaters to soft blankets — winter made cute!",
+    "img": "https://i.ibb.co.com/W4HzJz3J/Paw-some-Warmth.jpg"
+  }
+]

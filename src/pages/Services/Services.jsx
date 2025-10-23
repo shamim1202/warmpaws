@@ -5,7 +5,7 @@ const Services = () => {
   const services = useLoaderData();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-0">
+    <div className="max-w-7xl mx-auto px-4 md:px-0 md:mt-10">
       <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-6">
         Our Trusted Pet Care Services 🐾
       </h2>

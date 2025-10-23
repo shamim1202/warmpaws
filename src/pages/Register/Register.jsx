@@ -58,7 +58,7 @@ const Register = () => {
   return (
     <div className="py-6 md:py-12 flex flex-col items-center justify-center  px-4">
       {/* ---- Login Card ---- */}
-      <div className="card bg-base-100 w-full max-w-md shadow-xl hover:shadow-2xl transition-all duration-300">
+      <div className="card w-full max-w-md shadow-xl hover:shadow-2xl transition-all duration-300">
         {loading && <PageLoader message="Logging you in..." type="dots" />}
         {/* ---- Title ---- */}
         <h1 className="text-lg md:text-2xl font-bold mt-4 md:mt-6 text-center">
