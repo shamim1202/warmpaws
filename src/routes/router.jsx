@@ -6,6 +6,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import Services from "../pages/Services/Services";
+import PrivateRoute from "../providers/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -14,18 +15,23 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: ()=> fetch("/PetServices.json"),
+        loader: () => fetch("/PetServices.json"),
         Component: Home,
       },
       {
         path: "/services",
-        loader: ()=> fetch("/PetServices.json"),
+        loader: () => fetch("/PetServices.json"),
         Component: Services,
       },
       {
         path: "/service_details/:id",
-        loader: ()=> fetch("/PetServices.json"),
-        Component: ServiceDetails,
+        
+        element: (
+          <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/PetServices.json"),
       },
     ],
   },
@@ -35,13 +41,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/auth/login",
-        Component: Login
+        Component: Login,
       },
       {
         path: "/auth/register",
-        Component: Register
+        Component: Register,
       },
-    ]
+    ],
   },
   {
     path: "/profile",

@@ -7,6 +7,8 @@ import { AuthContext } from "../../providers/AuthProvider";
 const Register = () => {
   const { setUser, createUser } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
+  const [nameError, setNameError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
@@ -21,13 +23,19 @@ const Register = () => {
     console.log({ name, photo, email, password });
 
     if (name.length < 4) {
-      toast.error("Name must be at least 4 characters long!");
+      setNameError("Name must contain at least 4 characters longer.");
       setLoading(false);
       return;
     }
 
-    if (password.length < 6) {
-      toast.error("Password must be at least 6 characters long!");
+    if (
+      password.length < 6 ||
+      !/[A-Z]/.test(password) ||
+      !/[a-z]/.test(password)
+    ) {
+      setPasswordError(
+        "Password must contain at least 6 characters, one uppercase, and one lowercase letter."
+      );
       setLoading(false);
       return;
     }
@@ -38,6 +46,7 @@ const Register = () => {
         setUser(user);
         toast.success(`Welcome, ${name}! 🎉`);
         setLoading(false);
+        form.reset();
         navigate("/");
       })
       .catch((error) => {
@@ -70,6 +79,12 @@ const Register = () => {
               placeholder="Your Name"
               required
             />
+            {/* ---------- Name error ---------- */}
+            {nameError && (
+              <p className="text-red-500 text-xs md:text-sm mt-1 animate__animated animate__fadeIn">
+                {nameError}
+              </p>
+            )}
 
             {/* --------> Photo Url <---------- */}
             <label className="label text-sm md:text-lg">Photo Url</label>
@@ -100,6 +115,12 @@ const Register = () => {
               placeholder="Password"
               required
             />
+            {/* ---------- password error ---------- */}
+            {passwordError && (
+              <p className="text-red-500 text-xs md:text-sm mt-1 animate__animated animate__fadeIn">
+                {passwordError}
+              </p>
+            )}
 
             {/* ---- Gender Selection ---- */}
             <div className="mt-2 md:mt-4">

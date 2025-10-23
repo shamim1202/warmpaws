@@ -97,11 +97,11 @@ const NavBar = () => {
 
         {/* ------------------- End ---------------------- */}
         <div className="navbar-end">
-          <div className="flex items-center md:gap-3">
-            <div className="flex flex-col md:flex-row items-center gap-2">
+          <div className="flex items-center gap-2 md:gap-3">
+            <div className="flex flex-row items-center gap-2">
               <p className="font-medium">{user && user.displayName}</p>
               <img
-                className="md:w-10"
+                className="w-7 md:w-10"
                 src="https://i.ibb.co.com/3YyzRrk9/user.png"
                 alt=""
               />
@@ -111,7 +111,7 @@ const NavBar = () => {
                 Logout
               </button>
             ) : (
-              <Link to="/auth/login">Login</Link>
+              <Link  to="/auth/login" className="btn btn-sm md:btn-md btn-primary">Login</Link>
             )}
           </div>
         </div>
