@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router";
+import PageLoader from "../../components/PageLoader/PageLoader";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
@@ -41,7 +42,7 @@ const Register = () => {
       })
       .catch((error) => {
         const code = error.code;
-        toast.error(`${code}Registration failed! Please try again.`);
+        toast.error(`${code} Registration failed! Please try again.`);
         setLoading(false);
       });
   };
@@ -49,6 +50,7 @@ const Register = () => {
     <div className="py-6 md:py-12 flex flex-col items-center justify-center  px-4">
       {/* ---- Login Card ---- */}
       <div className="card bg-base-100 w-full max-w-md shadow-xl hover:shadow-2xl transition-all duration-300">
+        {loading && <PageLoader message="Logging you in..." type="dots" />}
         {/* ---- Title ---- */}
         <h1 className="text-lg md:text-2xl font-bold mt-4 md:mt-6 text-center">
           Welcome 👋 <br />

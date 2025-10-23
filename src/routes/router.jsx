@@ -3,9 +3,9 @@ import AuthLayout from "../layouts/AuthLayout";
 import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import Services from "../pages/Services/Services";
-import Register from "../pages/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/service_details/:id",
+        loader: ()=> fetch("/PetServices.json"),
         Component: ServiceDetails,
       },
     ],

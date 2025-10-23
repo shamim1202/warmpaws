@@ -58,7 +58,7 @@ const ServiceCard = ({ service }) => {
           to={`/service_details/${serviceId}`}
           className="btn btn-primary w-full text-center"
         >
-          View Details
+          View More
         </Link>
       </div>
     </div>

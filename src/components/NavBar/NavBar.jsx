@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import toast from "react-hot-toast";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../providers/AuthProvider";
 
@@ -44,7 +45,18 @@ const NavBar = () => {
     </>
   );
 
-  const { user } = useContext(AuthContext)
+  const { user, signOutUser } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    signOutUser()
+      .then(() => {
+        toast.success("Your logged out Successful! 🎉");
+      })
+      .catch((err) => {
+        const message = err.message;
+        toast.error(`${message}`);
+      });
+  };
 
   return (
     <div>
@@ -87,14 +99,20 @@ const NavBar = () => {
         <div className="navbar-end">
           <div className="flex items-center md:gap-3">
             <div className="flex flex-col md:flex-row items-center gap-2">
-              <p className="font-medium">{user && user.name}</p>
+              <p className="font-medium">{user && user.displayName}</p>
               <img
                 className="md:w-10"
                 src="https://i.ibb.co.com/3YyzRrk9/user.png"
                 alt=""
               />
             </div>
-            <Link to="/auth/login">Login</Link>
+            {user ? (
+              <button onClick={handleLogOut} className="btn btn-secondary">
+                Logout
+              </button>
+            ) : (
+              <Link to="/auth/login">Login</Link>
+            )}
           </div>
         </div>
       </div>
