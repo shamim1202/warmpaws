@@ -5,7 +5,7 @@ const Register = () => {
     e.preventDefault();
   };
   return (
-    <div className=" py-6 md:py-12 flex flex-col items-center justify-center bg-base-200 px-4">
+    <div className=" py-6 md:py-12 flex flex-col items-center justify-center  px-4">
       {/* ---- Login Card ---- */}
       <div className="card bg-base-100 w-full max-w-md shadow-xl hover:shadow-2xl transition-all duration-300">
         {/* ---- Title ---- */}

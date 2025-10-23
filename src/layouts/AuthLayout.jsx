@@ -3,11 +3,11 @@ import NavBar from '../components/NavBar/NavBar';
 
 const AuthLayout = () => {
     return (
-        <div>
-            <header className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
+            <header>
                 <NavBar></NavBar>
             </header>
-            <main>
+            <main className="bg-linear-to-r from-indigo-200 via-purple-200 to-pink-200 rounded">
                 <Outlet></Outlet>
             </main>
         </div>

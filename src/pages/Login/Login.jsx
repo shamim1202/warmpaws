@@ -6,13 +6,13 @@ const Login = () => {
     console.log("clicked");
   };
   return (
-    <div className="md:min-h-screen py-10 md:py-0 flex flex-col items-center justify-center bg-base-200 px-4">
+    <div className="md:min-h-screen py-10 md:py-0 flex flex-col items-center justify-center px-4">
       {/* ---- Login Card ---- */}
       <div className="card bg-base-100 w-full max-w-sm shadow-xl hover:shadow-2xl transition-all duration-300">
         {/* ---- Title ---- */}
         <h1 className="text-lg md:text-2xl font-bold mt-4 md:mt-6 text-center">
           Welcome Back 👋 <br />
-          <span className="text-blue-600">Login to Your Account</span>
+          <span className="text-blue-600 text-sm md:text-lg">Login to Your Account</span>
         </h1>
 
         <form className="card-body">
