@@ -1,20 +1,41 @@
+import { useContext } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
+  const { setUser, createUser } = useContext(AuthContext);
+
   const handleRegister = (e) => {
     e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const photo = form.photo_url.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log({ name, photo, email, password });
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+      })
+      .catch((error) => {
+        const message = error.message;
+        console.log(message);
+      });
   };
   return (
-    <div className=" py-6 md:py-12 flex flex-col items-center justify-center  px-4">
+    <div className="py-6 md:py-12 flex flex-col items-center justify-center  px-4">
       {/* ---- Login Card ---- */}
       <div className="card bg-base-100 w-full max-w-md shadow-xl hover:shadow-2xl transition-all duration-300">
         {/* ---- Title ---- */}
         <h1 className="text-lg md:text-2xl font-bold mt-4 md:mt-6 text-center">
           Welcome 👋 <br />
-          <span className="text-blue-600 text-sm md:text-lg">Create Your Account</span>
+          <span className="text-blue-600 text-sm md:text-lg">
+            Create Your Account
+          </span>
         </h1>
 
-        <form className="card-body">
+        <form onSubmit={handleRegister} className="card-body">
           <fieldset className="fieldset">
             {/* --------> Name <---------- */}
             <label className="label text-sm md:text-lg">Name</label>
@@ -58,7 +79,9 @@ const Register = () => {
 
             {/* ---- Gender Selection ---- */}
             <div className="mt-2 md:mt-4">
-              <label className="label text-sm md:text-base font-medium mb-2">Gender</label>
+              <label className="label text-sm md:text-base font-medium mb-2">
+                Gender
+              </label>
               <div className="flex items-center gap-4">
                 <label className="flex items-center gap-2">
                   <input
@@ -108,7 +131,7 @@ const Register = () => {
             </div>
 
             <button
-              onSubmit={handleRegister}
+              type="submit"
               className="btn btn-primary btn-outline mt-5 w-full"
             >
               Register Now
