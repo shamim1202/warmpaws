@@ -25,6 +25,7 @@ const Login = () => {
         setUser(user);
         toast.success(`Welcome back, ${user.displayName || "User"} 👋`);
         setLoading(false);
+        form.reset()
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((err) => {

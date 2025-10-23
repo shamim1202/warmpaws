@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { TiArrowLeftThick } from "react-icons/ti";
 import { useLoaderData, useNavigate, useParams } from "react-router";
+import BookService from "../../components/BookService/BookService";
 
 const ServiceDetails = () => {
   const services = useLoaderData();
@@ -31,6 +32,7 @@ const ServiceDetails = () => {
     providerName,
     providerEmail,
     slotsAvailable,
+    category,
   } = allService;
 
   return (
@@ -45,14 +47,20 @@ const ServiceDetails = () => {
           />
         </div>
 
-        <div className="w-full bg-base-100 rounded md:rounded-xl overflow-hidden flex flex-col md:flex-row items-center md:items-start">
+        <div className="w-full rounded md:rounded-xl overflow-hidden flex flex-col md:flex-row items-center md:items-start">
           {/* -------------- Details -------------- */}
           <div className="w-full p-4 md:p-8 md:space-y-4">
             <div className="flex flex-col md:flex-row md:items-center justify-between">
               <h2 className="text-xl md:text-3xl font-bold text-gray-800">
                 {serviceName}
               </h2>
-              <span className="text-yellow-500 font-semibold text-sm md:text-lg mt-2 md:mt-0">
+            </div>
+
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1 mt-4 text-blue-600 mb-2">
+              <span className="flex items-center gap-2 font-semibold text-sm md:text-lg">
+                Category: {category}
+              </span>
+              <span className="font-semibold text-sm md:text-lg mt-2 md:mt-0">
                 Rating: {rating}
               </span>
             </div>
@@ -101,6 +109,7 @@ const ServiceDetails = () => {
             </div>
           </div>
         </div>
+        <BookService></BookService>
       </div>
     </div>
   );
