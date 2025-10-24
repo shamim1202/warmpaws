@@ -24,7 +24,7 @@ const WinterHeroSlider = () => {
         navigation
         pagination={{ clickable: true }}
         effect="fade"
-        autoplay={{ delay: 3500, disableOnInteraction: false }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
         className="rounded-2xl overflow-hidden shadow-lg"
       >
@@ -38,15 +38,15 @@ const WinterHeroSlider = () => {
                 backgroundPosition: "center",
               }}
             >
-              <div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/70"></div>
-              <div className="relative z-10 text-center px-4">
-                <h2 className="text-2xl md:text-4xl font-bold mb-2 animate__animated animate__fadeInDown">
+              <div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/80"></div>
+              <div className="relative z-10 text-center px-4 md:w-2/3">
+                <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-8 animate__animated animate__fadeInDown">
                   {slide.title}
                 </h2>
                 <p className="text-sm md:text-lg opacity-90 animate__animated animate__fadeInUp">
                   {slide.desc}
                 </p>
-                <button className="btn btn-primary mt-5 animate__animated animate__fadeInUp">
+                <button className="btn btn-primary mt-4 md:mt-8 animate__animated animate__fadeInUp">
                   Explore Now
                 </button>
               </div>

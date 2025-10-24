@@ -3,6 +3,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
+import MyProfile from "../pages/MyProfile/MyProfile";
 import Register from "../pages/Register/Register";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import Services from "../pages/Services/Services";
@@ -25,7 +26,6 @@ const router = createBrowserRouter([
       },
       {
         path: "/service_details/:id",
-        
         element: (
           <PrivateRoute>
             <ServiceDetails></ServiceDetails>
@@ -51,7 +51,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <h1>Profile Layout</h1>,
+    element: (
+      <PrivateRoute>
+        <MyProfile></MyProfile>
+      </PrivateRoute>
+    ),
   },
   {
     path: "/*",

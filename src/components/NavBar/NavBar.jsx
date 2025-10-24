@@ -2,6 +2,7 @@ import { useContext } from "react";
 import toast from "react-hot-toast";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../providers/AuthProvider";
+import PageLoader from "../PageLoader/PageLoader";
 
 const NavBar = () => {
   const links = (
@@ -45,7 +46,7 @@ const NavBar = () => {
     </>
   );
 
-  const { user, signOutUser } = useContext(AuthContext);
+  const { user, signOutUser, authLoading } = useContext(AuthContext);
 
   const handleLogOut = () => {
     signOutUser()
@@ -57,7 +58,9 @@ const NavBar = () => {
         toast.error(`${message}`);
       });
   };
-
+  if (authLoading) {
+    return <PageLoader></PageLoader>
+  }
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -102,7 +105,11 @@ const NavBar = () => {
               <p className="font-medium">{user && user.displayName}</p>
               <img
                 className="w-7 md:w-10"
-                src="https://i.ibb.co.com/3YyzRrk9/user.png"
+                src={`${
+                  user
+                    ? user.photoURL
+                    : "https://i.ibb.co.com/3YyzRrk9/user.png"
+                }`}
                 alt=""
               />
             </div>
@@ -111,7 +118,12 @@ const NavBar = () => {
                 Logout
               </button>
             ) : (
-              <Link  to="/auth/login" className="btn btn-sm md:btn-md btn-primary">Login</Link>
+              <Link
+                to="/auth/login"
+                className="btn btn-sm md:btn-md btn-primary"
+              >
+                Login
+              </Link>
             )}
           </div>
         </div>

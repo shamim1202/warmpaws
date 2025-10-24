@@ -8,7 +8,7 @@ import Services from "../Services/Services";
 const Home = () => {
   const services = useLoaderData();
   return (
-    <div className="max-w-7xl mx-auto">
+    <div>
       <WinterHeroSlider></WinterHeroSlider>
       <Services></Services>
       <WinterCareTips></WinterCareTips>

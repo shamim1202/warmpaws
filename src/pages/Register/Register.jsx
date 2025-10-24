@@ -5,7 +5,7 @@ import PageLoader from "../../components/PageLoader/PageLoader";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
-  const { setUser, createUser } = useContext(AuthContext);
+  const { setUser, createUser, updateUser } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
   const [nameError, setNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -43,9 +43,20 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        setUser(user);
-        toast.success(`Welcome, ${name}! 🎉`);
+        updateUser({
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
         setLoading(false);
+
+        toast.success(`Welcome, ${name}! 🎉`);
+
         form.reset();
         navigate("/");
       })
