@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import AuthLayout from "../layouts/AuthLayout";
 import HomeLayout from "../layouts/HomeLayout";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import MyProfile from "../pages/MyProfile/MyProfile";
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/*",
-    element: <h1>404 : error</h1>,
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 export default router;

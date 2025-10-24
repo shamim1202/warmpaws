@@ -218,6 +218,7 @@ const Register = () => {
 
           {/* --------- Google ---------- */}
           <button
+            type="button"
             onClick={handleGoogleLogin}
             className="btn bg-white text-black border border-[#dfdfdf] hover:shadow transition-all duration-300"
           >
