@@ -8,8 +8,8 @@ const PopularServices = ({ services }) => {
   const topServices = [...data].sort((a, b) => b.rating - a.rating).slice(0, 3);
   return (
     <div>
-      <section className="max-w-7xl mx-auto px-4 md:px-0 py-10">
-        <h2 className="text-xl md:text-4xl font-bold text-center mb-8">
+      <section className="max-w-7xl mx-auto px-4 md:px-0 py-10 md:py-20">
+        <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-10">
           Discover Our Popular Pet Services ⭐
         </h2>
 
@@ -26,7 +26,7 @@ const PopularServices = ({ services }) => {
               />
 
               <div className="p-5">
-                <h3 className="text-lg font-semibold mb-2">
+                <h3 className="md:text-xl font-semibold mb-2">
                   {service.serviceName}
                 </h3>
 
@@ -37,7 +37,7 @@ const PopularServices = ({ services }) => {
 
                 <Link
                   to={`/service_details/${service.serviceId}`}
-                  className="inline-block mt-2 px-4 py-2 text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 rounded-lg transition"
+                  className="btn btn-primary btn-sm md:btn-md"
                 >
                   View Details
                 </Link>

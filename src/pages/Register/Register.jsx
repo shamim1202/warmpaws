@@ -101,7 +101,7 @@ const Register = () => {
             <input
               type="text"
               name="name"
-              className="input input-bordered w-full"
+              className="input input-bordered w-full text-xs md:text-sm"
               placeholder="Your Name"
               required
             />
@@ -117,7 +117,7 @@ const Register = () => {
             <input
               type="text"
               name="photo_url"
-              className="input input-bordered w-full"
+              className="input input-bordered w-full text-xs md:text-sm"
               placeholder="Photo Url"
               required
             />
@@ -127,7 +127,7 @@ const Register = () => {
             <input
               type="email"
               name="email"
-              className="input input-bordered w-full"
+              className="input input-bordered w-full text-xs md:text-sm"
               placeholder="Email"
               required
             />
@@ -137,7 +137,7 @@ const Register = () => {
             <input
               type="password"
               name="password"
-              className="input input-bordered w-full"
+              className="input input-bordered w-full text-xs md:text-sm"
               placeholder="Password"
               required
             />
@@ -158,7 +158,7 @@ const Register = () => {
                   <input
                     type="radio"
                     name="gender"
-                    className="radio bg-blue-100 border-blue-300 checked:bg-blue-200 checked:text-blue-600 checked:border-blue-600"
+                    className="radio radio-xs md:radio-sm bg-blue-100 border-blue-300 checked:bg-blue-200 checked:text-blue-600 checked:border-blue-600"
                     value="male"
                   />
                   <span className="text-xs md:text-sm">Male</span>
@@ -167,7 +167,7 @@ const Register = () => {
                   <input
                     type="radio"
                     name="gender"
-                    className="radio bg-pink-100 border-pink-300 checked:bg-pink-200 checked:text-pink-600 checked:border-pink-600"
+                    className="radio radio-xs md:radio-sm bg-pink-100 border-pink-300 checked:bg-pink-200 checked:text-pink-600 checked:border-pink-600"
                     value="female"
                   />
                   <span className="text-xs md:text-sm">Female</span>
@@ -176,7 +176,7 @@ const Register = () => {
                   <input
                     type="radio"
                     name="gender"
-                    className="radio bg-yellow-100 border-yellow-300 checked:bg-yellow-200 checked:text-yellow-600 checked:border-yellow-600"
+                    className="radio radio-xs md:radio-sm bg-yellow-100 border-yellow-300 checked:bg-yellow-200 checked:text-yellow-600 checked:border-yellow-600"
                     value="other"
                   />
                   <span className="text-xs md:text-sm">Other</span>
@@ -203,7 +203,7 @@ const Register = () => {
 
             <button
               type="submit"
-              className={`btn btn-primary btn-outline mt-5 w-full ${
+              className={`btn btn-primary btn-outline btn-sm md:btn-md mt-2 md:mt-5 w-full ${
                 loading
                   ? "animate__animated animate__pulse animate__infinite"
                   : ""
@@ -214,13 +214,13 @@ const Register = () => {
             </button>
           </fieldset>
 
-          <div className="divider">OR</div>
+          <div className="divider my-1 text-xs md:my-2 md:text-sm">OR</div>
 
           {/* --------- Google ---------- */}
           <button
             type="button"
             onClick={handleGoogleLogin}
-            className="btn bg-white text-black border border-[#dfdfdf] hover:shadow transition-all duration-300"
+            className="btn btn-sm md:btn-md bg-white text-black border border-[#dfdfdf] hover:shadow transition-all duration-300"
           >
             <svg
               aria-label="Google logo"

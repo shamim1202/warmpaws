@@ -63,11 +63,27 @@ const NavBar = () => {
 
   if (loading) return <PageLoader></PageLoader>;
   return (
-    <div>
       <div className="navbar bg-linear-to-r from-sky-100 via-pink-100 to-violet-100">
         {/* ------------------- Start -------------------- */}
         <div className="navbar-start">
-          <div className="dropdown">
+          {/* -------------- Logo ------------ */}
+          <div className="py-1 md:py-2 hidden md:flex">
+            <Link to="/" className="flex items-center justify-center gap-1">
+              <h1 className="md:text-xl font-extrabold pb-1 md:pb-3">
+                Warm
+              </h1>
+              <img
+                className="w-8 md:w-10"
+                src="https://i.ibb.co.com/LdGhbNSk/logo.png"
+                alt=""
+              />
+              <h1 className="md:text-xl font-extrabold pt-1 md:pt-3">
+                Paws
+              </h1>
+            </Link>
+          </div>
+
+          <div className="dropdown relative">
             <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +103,7 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-4 w-40 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-linear-to-r from-sky-100 via-pink-100 to-violet-100 rounded-box z-50 mt-5 ml-2 w-40 p-2 shadow"
             >
               {links}
             </ul>
@@ -139,7 +155,6 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

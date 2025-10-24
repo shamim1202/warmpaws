@@ -36,7 +36,7 @@ const ServiceDetails = () => {
   } = allService;
 
   return (
-    <div className="max-w-7xl mx-auto p-4 md:p-10 bg-linear-to-r from-indigo-200 via-purple-200 to-pink-200 rounded md:rounded-xl">
+    <div className="max-w-7xl mx-auto p-4 md:p-10 mt-2 md:mt-8 bg-linear-to-r from-purple-100 via-green-100 to-rose-100 rounded md:rounded-xl">
       <div className="flex flex-col items-center justify-center rounded md:rounded-xl">
         {/* ---- Image ---- */}
         <div className="w-full md:w-3/5 md:mb-8">
@@ -56,27 +56,27 @@ const ServiceDetails = () => {
               </h2>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1 mt-4 text-blue-600 mb-2">
-              <span className="flex items-center gap-2 font-semibold text-sm md:text-lg">
+            <div className="flex flex-row justify-between items-start md:items-center gap-1 mt-4 text-blue-600 md:mb-2">
+              <span className="font-medium md:font-semibold text-sm md:text-lg">
                 Category: {category}
               </span>
-              <span className="font-semibold text-sm md:text-lg mt-2 md:mt-0">
+              <span className="font-medium md:font-semibold text-sm md:text-lg">
                 Rating: {rating}
               </span>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1 mt-4 text-blue-600 mb-2">
-              <span className="flex items-center gap-2 font-semibold text-sm md:text-lg">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1 mt-2 md:mt-4 text-blue-600 mb-2">
+              <span className="font-medium md:font-semibold text-sm md:text-lg">
                 Provider: {providerName}
               </span>
-              <span className="text-sm md:text-lg font-semibold">
+              <span className="font-medium md:font-semibold text-sm md:text-lg">
                 Email: {providerEmail}
               </span>
             </div>
 
             {/* -------- Description --------- */}
             <p className="w-full text-gray-600 text-xs md:text-base leading-relaxed">
-              <span className="font-semibold text-sm md:text-lg">
+              <span className="font-medium md:font-semibold text-sm md:text-lg">
                 Description :
               </span>{" "}
               {description}
@@ -84,29 +84,21 @@ const ServiceDetails = () => {
 
             {/* -------- Price & Slots ------- */}
             <div className="flex flex-row justify-between items-start md:items-center gap-1 mt-4 text-blue-600">
-              <span className="flex items-center gap-2 font-semibold text-sm md:text-lg">
+              <span className="font-medium md:font-semibold text-sm md:text-lg">
                 Price: ${price}
               </span>
-              <span className="text-sm md:text-lg font-semibold">
+              <span className="font-medium md:font-semibold text-sm md:text-lg">
                 Slot Available: {slotsAvailable}
               </span>
             </div>
 
-            {/* -------- Back & Book button ------- */}
-            <div className="flex flex-col-reverse md:flex-row gap-3 items-center justify-between mt-3 md:m-0">
-              {/* ---- Back Button ---- */}
-              <button
-                onClick={() => navigate(-1)}
-                className="text-blue-500 hover:text-blue-700 transition-colors flex items-center gap-2 btn btn-outline w-full md:w-auto"
-              >
-                <TiArrowLeftThick /> Back
-              </button>
-
-              {/* ---- Book Now Button ---- */}
-              <button className="btn btn-primary w-full md:w-auto transition-all duration-400 hover:scale-101">
-                Book Service
-              </button>
-            </div>
+            {/* ---- Back Button ---- */}
+            <button
+              onClick={() => navigate(-1)}
+              className="text-blue-500 hover:text-blue-700 transition-colors flex items-center gap-2 btn btn-outline btn-sm md:btn-md w-full md:w-auto mt-2.5"
+            >
+              <TiArrowLeftThick /> Back
+            </button>
           </div>
         </div>
         <BookService></BookService>

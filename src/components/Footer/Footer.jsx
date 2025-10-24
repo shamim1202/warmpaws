@@ -4,19 +4,21 @@ import { Link } from "react-router";
 const Footer = () => {
   return (
     <div className="bg-linear-to-r from-sky-100 via-pink-100 to-violet-100">
-      <footer className="text-base-content px-6 py-10 mt-10">
+      <footer className="text-base-content px-6 pb-3 md:pb-6 pt-6 md:pt-10 mt-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* ------- Contact Info ------- */}
           <div>
-            <h2 className="text-lg font-semibold mb-3">Contact Info</h2>
-            <p>123 Main Street, City, Country</p>
-            <p>Email: support@mybrand.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
+            <h2 className="md:text-lg font-semibold mb-3">Contact Info</h2>
+            <p className="text-sm md:text-base">
+              123 Main Street, City, Country
+            </p>
+            <p className="text-sm md:text-base">Email: support@mybrand.com</p>
+            <p className="text-sm md:text-base">Phone: +1 (555) 123-4567</p>
           </div>
 
           {/* ------- Social Links ------- */}
           <div>
-            <h2 className="text-lg font-semibold mb-3">Follow Us</h2>
+            <h2 className="md:text-lg font-semibold mb-3">Follow Us</h2>
             <div className="flex gap-4 text-2xl">
               <a
                 href="https://facebook.com"
@@ -55,8 +57,8 @@ const Footer = () => {
 
           {/* ------- Privacy Policy ------- */}
           <div>
-            <h2 className="text-lg font-semibold mb-3">Legal</h2>
-            <ul className="space-y-2">
+            <h2 className="md:text-lg font-semibold mb-3">Legal</h2>
+            <ul className="md:space-y-2 text-sm md:text-base">
               <li>
                 <Link to="/privacy-policy" className="hover:text-primary">
                   Privacy Policy
@@ -72,7 +74,7 @@ const Footer = () => {
         </div>
 
         {/* ------- Bottom bar (right & reserved) ------- */}
-        <div className="text-center mt-10 border-t pt-4 text-sm text-gray-500">
+        <div className="text-center mt-6 md:mt-10 border-t pt-3 md:pt-5 text-xs md:text-base text-gray-500">
           © {new Date().getFullYear()} Warm-Paws. All rights reserved.
         </div>
       </footer>

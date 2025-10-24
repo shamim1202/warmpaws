@@ -18,7 +18,7 @@ const WinterHeroSlider = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 md:px-0 py-6 md:py-10">
+    <div className="w-full max-w-7xl mx-auto px-4 md:px-0 mt-2 md:mt-12">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         navigation
@@ -26,7 +26,7 @@ const WinterHeroSlider = () => {
         effect="fade"
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
-        className="rounded-2xl overflow-hidden shadow-lg"
+        className="rounded md:rounded-xl overflow-hidden shadow-lg"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>

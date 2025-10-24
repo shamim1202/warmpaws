@@ -7,6 +7,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 const Login = () => {
   const { signInUser, setUser, googleSignIn } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -64,10 +65,18 @@ const Login = () => {
         <form onSubmit={handleLogin} className="card-body">
           <fieldset className="fieldset">
             <label className="label text-sm md:text-lg">Email</label>
+            {/* <input
+              type="email"
+              name="email"
+              className="input input-bordered w-full text-xs md:text-sm"
+              placeholder="Email"
+            /> */}
             <input
               type="email"
               name="email"
-              className="input input-bordered w-full"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="input input-bordered w-full text-xs md:text-sm"
               placeholder="Email"
             />
 
@@ -75,30 +84,40 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              className="input input-bordered w-full"
+              className="input input-bordered w-full text-xs md:text-sm"
               placeholder="Password"
             />
 
-            <div className="text-right mt-2">
+            {/* <div className="text-right mt-2">
               <a className="link link-hover text-sm md:text-base text-blue-600">
                 Forgot password?
               </a>
+            </div> */}
+            <div className="text-right mt-2">
+              <span
+                onClick={() =>
+                  navigate("/auth/forgot_password", { state: { email } })
+                }
+                className="link link-hover text-sm md:text-base text-blue-600 cursor-pointer"
+              >
+                Forgot password?
+              </span>
             </div>
 
             <button
               type="submit"
-              className="btn btn-primary btn-outline mt-5 w-full"
+              className="btn btn-primary btn-outline btn-sm md:btn-md mt-2 md:mt-5 w-full"
             >
               Login
             </button>
           </fieldset>
 
-          <div className="divider">OR</div>
+          <div className="divider my-1 text-xs md:my-2 md:text-sm">OR</div>
 
           {/* --------- Google ---------- */}
           <button
             onClick={handleGoogleLogin}
-            className="btn bg-white text-black border border-[#dfdfdf] hover:shadow transition-all duration-300"
+            className="btn btn-sm md:btn-md bg-white text-black border border-[#dfdfdf] hover:shadow transition-all duration-300"
           >
             <svg
               aria-label="Google logo"

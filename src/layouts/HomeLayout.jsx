@@ -15,7 +15,7 @@ const HomeLayout = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <header>
-        <Header></Header>
+        {/* <Header></Header> */}
         <NavBar></NavBar>
       </header>
       <main>
