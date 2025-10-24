@@ -12,8 +12,8 @@ const NavBar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "text-sm md:text-base text-primary font-semibold"
-              : "text-base-content text-sm md:text-base font-semibold"
+              ? "text-sm md:text-base text-primary font-semibold underline"
+              : "text-base-content text-sm md:text-base font-medium"
           }
         >
           Home
@@ -25,7 +25,7 @@ const NavBar = () => {
           className={({ isActive }) =>
             isActive
               ? "text-sm md:text-base text-primary font-semibold underline"
-              : "text-base-content text-sm md:text-base font-semibold"
+              : "text-base-content text-sm md:text-base font-font-medium"
           }
         >
           Services
@@ -36,8 +36,8 @@ const NavBar = () => {
           to="/profile"
           className={({ isActive }) =>
             isActive
-              ? "text-sm md:text-base text-primary font-semibold"
-              : "text-base-content text-sm md:text-base font-semibold"
+              ? "text-sm md:text-base text-primary font-semibold underline"
+              : "text-base-content text-sm md:text-base font-font-medium"
           }
         >
           My Profile
@@ -46,28 +46,29 @@ const NavBar = () => {
     </>
   );
 
-  const { user, signOutUser, authLoading } = useContext(AuthContext);
+  const { user, signOutUser, loading, setLoading } = useContext(AuthContext);
 
   const handleLogOut = () => {
     signOutUser()
       .then(() => {
         toast.success("Your logged out Successful! 🎉");
+        setLoading(false);
       })
       .catch((err) => {
         const message = err.message;
         toast.error(`${message}`);
+        setLoading(false);
       });
   };
-  if (authLoading) {
-    return <PageLoader></PageLoader>
-  }
+
+  if (loading) return <PageLoader></PageLoader>;
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-linear-to-r from-indigo-200 via-purple-200 to-pink-200 rounded">
         {/* ------------------- Start -------------------- */}
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -86,7 +87,7 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-4 w-40 p-2 shadow"
             >
               {links}
             </ul>
@@ -94,33 +95,42 @@ const NavBar = () => {
         </div>
 
         {/* ------------------- Center --------------------- */}
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
 
         {/* ------------------- End ---------------------- */}
         <div className="navbar-end">
           <div className="flex items-center gap-2 md:gap-3">
-            <div className="flex flex-row items-center gap-2">
-              <p className="font-medium">{user && user.displayName}</p>
-              <img
-                className="w-7 md:w-10"
-                src={`${
-                  user
-                    ? user.photoURL
-                    : "https://i.ibb.co.com/3YyzRrk9/user.png"
-                }`}
-                alt=""
-              />
+            <div className="flex flex-row items-center gap-1 md:gap-2">
+              <p className="text-xs md:text-sm font-semibold">
+                {user && user.displayName}
+              </p>
+
+              <div className="avatar avatar-online">
+                <div className="w-7 md:w-11 rounded-full">
+                  <img
+                    src={`${
+                      user
+                        ? user.photoURL
+                        : "https://i.ibb.co.com/3YyzRrk9/user.png"
+                    }`}
+                  />
+                </div>
+              </div>
             </div>
+
             {user ? (
-              <button onClick={handleLogOut} className="btn btn-secondary">
+              <button
+                onClick={handleLogOut}
+                className="btn btn-secondary btn-xs md:btn-md"
+              >
                 Logout
               </button>
             ) : (
               <Link
                 to="/auth/login"
-                className="btn btn-sm md:btn-md btn-primary"
+                className="btn btn-primary btn-xs md:btn-md"
               >
                 Login
               </Link>

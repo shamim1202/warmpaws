@@ -5,8 +5,7 @@ import PageLoader from "../../components/PageLoader/PageLoader";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
-  const { setUser, createUser, updateUser } = useContext(AuthContext);
-  const [loading, setLoading] = useState(false);
+  const {  setUser, createUser, updateUser, loading, setLoading } = useContext(AuthContext);
   const [nameError, setNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
@@ -49,16 +48,15 @@ const Register = () => {
         })
           .then(() => {
             setUser({ ...user, displayName: name, photoURL: photo });
+            toast.success(`Welcome, ${name}! 🎉`);
+            setLoading(false);
+            form.reset();
+            navigate("/");
           })
           .catch((err) => {
             console.log(err);
+            setLoading(false);
           });
-        setLoading(false);
-
-        toast.success(`Welcome, ${name}! 🎉`);
-
-        form.reset();
-        navigate("/");
       })
       .catch((error) => {
         const code = error.code;

@@ -40,15 +40,19 @@ const WinterHeroSlider = () => {
             >
               <div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/80"></div>
               <div className="relative z-10 text-center px-4 md:w-2/3">
-                <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-8 animate__animated animate__fadeInDown">
+
+                <h2 className="text-xl md:text-4xl font-bold mb-4 md:mb-8 animate__animated animate__fadeInDown">
                   {slide.title}
                 </h2>
-                <p className="text-sm md:text-lg opacity-90 animate__animated animate__fadeInUp">
+
+                <p className="text-xs md:text-lg opacity-90 animate__animated animate__fadeInUp">
                   {slide.desc}
                 </p>
-                <button className="btn btn-primary mt-4 md:mt-8 animate__animated animate__fadeInUp">
+
+                <button className="btn btn-primary btn-xs md:btn-md mt-5 md:mt-8 animate__animated animate__fadeInUp">
                   Explore Now
                 </button>
+
               </div>
             </div>
           </SwiperSlide>

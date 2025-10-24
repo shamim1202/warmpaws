@@ -17,17 +17,14 @@ const AuthProvider = ({ children }) => {
   console.log(user);
 
   const createUser = (email, password) => {
-    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const signInUser = (email, password) => {
-    setLoading(true)
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const signOutUser = () => {
-    setLoading(true)
     return signOut(auth);
   };
 
@@ -53,6 +50,7 @@ const AuthProvider = ({ children }) => {
     signOutUser,
     updateUser,
     loading,
+    setLoading,
   };
   return <AuthContext value={authData}>{children}</AuthContext>;
 };

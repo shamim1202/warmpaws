@@ -10,3 +10,18 @@
 * {
   font-family: "Nunito Sans", sans-serif;
 }
+
+@media (min-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scale(0.5);
+    top: 80% !important;
+  }
+}

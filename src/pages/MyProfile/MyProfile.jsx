@@ -5,8 +5,9 @@ import PageLoader from "../../components/PageLoader/PageLoader";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const MyProfile = () => {
-  const { user, setUser, updateUser, authLoading } = useContext(AuthContext);
-  const [loading, setLoading] = useState(false);
+  const { user, setUser, updateUser, loading, setLoading } =
+    useContext(AuthContext);
+
   const [formData, setFormData] = useState({
     displayName: user?.displayName || "",
     photoURL: user?.photoURL || "",
@@ -44,9 +45,6 @@ const MyProfile = () => {
       });
   };
 
-  if (authLoading) {
-    return <PageLoader></PageLoader>
-  }
   // 👉 show spinner while updating
   if (loading) return <PageLoader></PageLoader>;
 
@@ -57,8 +55,8 @@ const MyProfile = () => {
         <div className="card w-full max-w-md shadow-xl hover:shadow-2xl transition-all duration-300">
           <div className="card-body items-center text-center">
             {/* ---- Profile Image ---- */}
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+            <div className="avatar avatar-online">
+              <div className="w-24 rounded-full ring-2 ring-success ring-offset-base-100 ring-offset-2">
                 <img
                   src={
                     user?.photoURL ||
