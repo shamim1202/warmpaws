@@ -12,12 +12,12 @@ const ServiceCard = ({ service }) => {
     category,
   } = service;
   return (
-    <div className="card bg-base-100 shadow-md hover:shadow-xl transition rounded-lg overflow-hidden">
+    <div className="card bg-base-100 rounded-lg shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 overflow-hidden">
       {/* Image */}
       <img src={image} alt={serviceName} className="w-full h-56 object-cover" />
 
       {/* ----------------- Card content ------------------- */}
-      <div className="p-3 md:p-6 flex flex-col gap-2 md:gap-4 h-full bg-linear-to-r from-sky-100 via-pink-100 to-violet-100">
+      <div className="p-3 md:p-6 flex flex-col gap-2 md:gap-4 h-full bg-linear-to-r from-sky-50 via-pink-50 to-violet-50 ">
         <div>
           <h3 className="md:text-xl font-semibold mb-2">{serviceName}</h3>
 

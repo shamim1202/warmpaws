@@ -35,7 +35,7 @@ const WinterCareTips = () => {
   ];
 
   return (
-    <div className="md:my-10 md:px-4 bg-linear-to-r from-sky-200 via-pink-200 to-violet-200">
+    <div className="md:my-10 md:px-4 bg-linear-to-r from-sky-100 via-pink-100 to-violet-100">
       <section className="max-w-7xl mx-auto px-4 md:px-0 py-8">
         <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-6">
           Winter Care Tips for Your Pets 💡
