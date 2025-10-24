@@ -5,8 +5,8 @@ import PageLoader from "../../components/PageLoader/PageLoader";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-  const { signInUser, setUser, googleSignIn } = useContext(AuthContext);
-  const [loading, setLoading] = useState(false);
+  const { signInUser, setUser, googleSignIn, loading, setLoading } = useContext(AuthContext);
+  // const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
@@ -48,6 +48,8 @@ const Login = () => {
         toast.error(`${message}, Login failed! Please try again.`);
       });
   };
+
+  if(loading) return <PageLoader></PageLoader>
 
   return (
     <div className="py-6 md:py-12 flex flex-col items-center justify-center  px-4">

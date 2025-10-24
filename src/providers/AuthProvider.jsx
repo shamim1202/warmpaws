@@ -22,26 +22,32 @@ const AuthProvider = ({ children }) => {
   console.log(user);
 
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const signInUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const googleSignIn = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
   const signOutUser = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
   const updateUser = (updatedData) => {
+    setLoading(true);
     return updateProfile(auth.currentUser, updatedData);
   };
 
   const resetPassword = (email) => {
+    setLoading(true);
     return sendPasswordResetEmail(auth, email);
   };
 
