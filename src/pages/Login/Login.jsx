@@ -5,7 +5,7 @@ import PageLoader from "../../components/PageLoader/PageLoader";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-  const { signInUser, setUser } = useContext(AuthContext);
+  const { signInUser, setUser, googleSignIn } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -23,9 +23,9 @@ const Login = () => {
       .then((res) => {
         const user = res.user;
         setUser(user);
-        toast.success(`Welcome back, ${user.displayName || "User"} 👋`);
+        toast.success(`Welcome back, ${user.displayName || "Guest!"} 👋`);
         setLoading(false);
-        form.reset()
+        form.reset();
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((err) => {
@@ -34,6 +34,20 @@ const Login = () => {
         setLoading(false);
       });
   };
+
+  const handleGoogleLogin = () => {
+    googleSignIn()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        toast.success(`Welcome back, ${user.displayName || "Guest!"} 👋`);
+      })
+      .then((err) => {
+        const message = err.message;
+        toast.error(`${message}, Login failed! Please try again.`);
+      });
+  };
+
   return (
     <div className="py-6 md:py-12 flex flex-col items-center justify-center  px-4">
       {/* ---- Login Card ---- */}
@@ -80,8 +94,12 @@ const Login = () => {
           </fieldset>
 
           <div className="divider">OR</div>
+
           {/* --------- Google ---------- */}
-          <button className="btn bg-white text-black border border-[#dfdfdf] hover:shadow transition-all duration-300">
+          <button
+            onClick={handleGoogleLogin}
+            className="btn bg-white text-black border border-[#dfdfdf] hover:shadow transition-all duration-300"
+          >
             <svg
               aria-label="Google logo"
               width="16"

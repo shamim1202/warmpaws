@@ -64,7 +64,7 @@ const NavBar = () => {
   if (loading) return <PageLoader></PageLoader>;
   return (
     <div>
-      <div className="navbar bg-linear-to-r from-indigo-200 via-purple-200 to-pink-200 rounded">
+      <div className="navbar bg-linear-to-r from-sky-100 via-pink-100 to-violet-100">
         {/* ------------------- Start -------------------- */}
         <div className="navbar-start">
           <div className="dropdown">
@@ -107,7 +107,7 @@ const NavBar = () => {
                 {user && user.displayName}
               </p>
 
-              <div className="avatar avatar-online">
+              <div className="avatar">
                 <div className="w-7 md:w-11 rounded-full">
                   <img
                     src={`${
@@ -115,6 +115,7 @@ const NavBar = () => {
                         ? user.photoURL
                         : "https://i.ibb.co.com/3YyzRrk9/user.png"
                     }`}
+                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>

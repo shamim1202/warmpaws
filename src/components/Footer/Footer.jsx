@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="bg-linear-to-r from-indigo-200 via-purple-200 to-pink-200">
+    <div className="bg-linear-to-r from-sky-100 via-pink-100 to-violet-100">
       <footer className="text-base-content px-6 py-10 mt-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* ------- Contact Info ------- */}

@@ -7,7 +7,7 @@ const AuthLayout = () => {
             <header>
                 <NavBar></NavBar>
             </header>
-            <main className="bg-linear-to-r from-indigo-200 via-purple-200 to-pink-200 rounded">
+            <main className="bg-linear-to-r from-indigo-200 via-purple-200 to-pink-200">
                 <Outlet></Outlet>
             </main>
         </div>

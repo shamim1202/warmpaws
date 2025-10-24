@@ -17,7 +17,7 @@ const ServiceCard = ({ service }) => {
       <img src={image} alt={serviceName} className="w-full h-56 object-cover" />
 
       {/* ----------------- Card content ------------------- */}
-      <div className="p-3 md:p-6 flex flex-col gap-2 md:gap-4 h-full">
+      <div className="p-3 md:p-6 flex flex-col gap-2 md:gap-4 h-full bg-linear-to-r from-sky-100 via-pink-100 to-violet-100">
         <div>
           <h3 className="md:text-xl font-semibold mb-2">{serviceName}</h3>
 

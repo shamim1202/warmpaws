@@ -35,8 +35,8 @@ const WinterCareTips = () => {
   ];
 
   return (
-    <div className="md:pt-10">
-      <section className="max-w-7xl mx-auto px-4 md:px-0 py-10">
+    <div className="md:my-10 md:px-4 bg-linear-to-r from-sky-200 via-pink-200 to-violet-200">
+      <section className="max-w-7xl mx-auto px-4 md:px-0 py-8">
         <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-6">
           Winter Care Tips for Your Pets 💡
         </h2>
@@ -47,7 +47,7 @@ const WinterCareTips = () => {
               key={tip.id}
               className="rounded-xl border border-transparent hover:border-gradient-to-r hover:from-blue-400 hover:via-purple-500 hover:to-teal-400 transition-all duration-300"
             >
-              <div className="bg-base-100 rounded md:rounded-xl p-2 md:p-5 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 h-42 md:h-34">
+              <div className="bg-base-100 rounded md:rounded-xl p-2 md:p-5 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 h-42 md:h-36">
                 <h3 className="text-sm md:text-xl font-bold mb-2 flex items-center gap-2">
                   <HiOutlineLightBulb className="text-xl text-yellow-600"/>  {tip.title}
                 </h3>

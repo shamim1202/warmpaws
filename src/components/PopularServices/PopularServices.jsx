@@ -13,11 +13,11 @@ const PopularServices = ({ services }) => {
           Discover Our Popular Pet Services ⭐
         </h2>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
           {topServices.map((service) => (
             <div
               key={service.serviceId}
-              className="bg-base-100 rounded-xl border border-base-200 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 overflow-hidden"
+              className="bg-base-100 rounded-xl border border-base-200 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 overflow-hidden bg-linear-to-r from-sky-100 via-pink-100 to-violet-100"
             >
               <img
                 src={service.image}
