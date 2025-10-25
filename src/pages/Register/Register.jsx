@@ -81,6 +81,8 @@ const Register = () => {
       });
   };
 
+  if(loading) return <PageLoader></PageLoader>
+
   return (
     <div className="py-6 md:py-12 flex flex-col items-center justify-center  px-4">
       {/* ---- Login Card ---- */}

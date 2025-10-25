@@ -6,7 +6,6 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const { signInUser, setUser, googleSignIn, loading, setLoading } = useContext(AuthContext);
-  // const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
@@ -67,12 +66,6 @@ const Login = () => {
         <form onSubmit={handleLogin} className="card-body">
           <fieldset className="fieldset">
             <label className="label text-sm md:text-lg">Email</label>
-            {/* <input
-              type="email"
-              name="email"
-              className="input input-bordered w-full text-xs md:text-sm"
-              placeholder="Email"
-            /> */}
             <input
               type="email"
               name="email"
@@ -90,11 +83,6 @@ const Login = () => {
               placeholder="Password"
             />
 
-            {/* <div className="text-right mt-2">
-              <a className="link link-hover text-sm md:text-base text-blue-600">
-                Forgot password?
-              </a>
-            </div> */}
             <div className="text-right mt-2">
               <span
                 onClick={() =>

@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { TiArrowLeftThick } from "react-icons/ti";
 import { useLoaderData, useNavigate, useParams } from "react-router";
 import BookService from "../../components/BookService/BookService";
+import PageLoader from "../../components/PageLoader/PageLoader";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const ServiceDetails = () => {
+  const { loading } = useContext(AuthContext);
   const services = useLoaderData();
   const { id } = useParams();
   const [allService, setAllService] = useState({});
@@ -22,6 +25,8 @@ const ServiceDetails = () => {
       </div>
     );
   }
+
+  if (loading) return <PageLoader></PageLoader>;
 
   const {
     serviceName,

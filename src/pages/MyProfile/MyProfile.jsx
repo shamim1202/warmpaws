@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
+import { useLocation, useNavigate } from "react-router";
 import NavBar from "../../components/NavBar/NavBar";
 import PageLoader from "../../components/PageLoader/PageLoader";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -7,6 +8,8 @@ import { AuthContext } from "../../providers/AuthProvider";
 const MyProfile = () => {
   const { user, setUser, updateUser, loading, setLoading } =
     useContext(AuthContext);
+      const navigate = useNavigate();
+      const location = useLocation();
 
   const [formData, setFormData] = useState({
     displayName: user?.displayName || "",
@@ -38,6 +41,7 @@ const MyProfile = () => {
         });
         toast.success("✅ Profile updated successfully!");
         setLoading(false);
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch(() => {
         toast.error("❌ Failed to update profile. Try again!");
@@ -45,7 +49,6 @@ const MyProfile = () => {
       });
   };
 
-  // 👉 show spinner while updating
   if (loading) return <PageLoader></PageLoader>;
 
   return (
