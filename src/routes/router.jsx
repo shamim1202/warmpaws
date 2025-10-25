@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router";
+import PageLoader from "../components/PageLoader/PageLoader";
 import AuthLayout from "../layouts/AuthLayout";
 import HomeLayout from "../layouts/HomeLayout";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
@@ -20,11 +21,13 @@ const router = createBrowserRouter([
         index: true,
         loader: () => fetch("/PetServices.json"),
         Component: Home,
+        hydrateFallbackElement: <PageLoader></PageLoader>
       },
       {
         path: "/services",
         loader: () => fetch("/PetServices.json"),
         Component: Services,
+        hydrateFallbackElement: <PageLoader></PageLoader>
       },
       {
         path: "/service_details/:id",
@@ -34,6 +37,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("/PetServices.json"),
+        hydrateFallbackElement: <PageLoader></PageLoader>
       },
     ],
   },

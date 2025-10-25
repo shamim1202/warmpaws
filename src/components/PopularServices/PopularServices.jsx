@@ -2,7 +2,6 @@ import { Link } from "react-router";
 
 const PopularServices = ({ services }) => {
   const data = services;
-  console.log(data);
 
   // Sort by rating and pick top 3
   const topServices = [...data].sort((a, b) => b.rating - a.rating).slice(0, 3);

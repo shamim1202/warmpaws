@@ -24,7 +24,6 @@ const Register = () => {
     const photo = form.photo_url.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log({ name, photo, email, password });
 
     if (name.length < 4) {
       setNameError("Name must contain at least 4 characters longer.");
@@ -59,7 +58,7 @@ const Register = () => {
             navigate("/");
           })
           .catch((err) => {
-            console.log(err);
+            toast.error(err.message);
             setLoading(false);
           });
       })
@@ -84,8 +83,9 @@ const Register = () => {
       });
   };
 
-  if (loading) return <PageLoader></PageLoader>;
   usePageTitle("Register")
+  if (loading) return <PageLoader></PageLoader>;
+  
 
   return (
     <div className="py-6 md:py-12 flex flex-col items-center justify-center px-4 md:rounded">

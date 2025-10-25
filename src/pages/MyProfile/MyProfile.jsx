@@ -50,8 +50,9 @@ const MyProfile = () => {
       });
   };
 
-  if (loading) return <PageLoader></PageLoader>;
   usePageTitle("My Profile")
+  if (loading) return <PageLoader></PageLoader>;
+  
 
   return (
     <div className="max-w-7xl mx-auto">

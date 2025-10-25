@@ -21,7 +21,6 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log({ email, password });
 
     signInUser(email, password)
       .then((res) => {
@@ -53,8 +52,9 @@ const Login = () => {
       });
   };
 
-  if (loading) return <PageLoader></PageLoader>;
   usePageTitle("Login")
+  if (loading) return <PageLoader></PageLoader>;
+  
 
   return (
     <div className="py-6 md:py-12 flex flex-col items-center justify-center px-4 md:rounded">

@@ -10,7 +10,7 @@ import { AuthContext } from "../providers/AuthProvider";
 const HomeLayout = () => {
   const { loading } = useContext(AuthContext);
 
-  if (loading) return <PageLoader></PageLoader>
+  if (loading) return <PageLoader></PageLoader>;
 
   return (
     <div className="max-w-7xl mx-auto">

@@ -17,6 +17,8 @@ const WinterHeroSlider = () => {
       .catch((err) => console.error("Failed to load slides:", err));
   }, []);
 
+  const loopEnabled = slides.length > 1;
+
   return (
     <div className="w-full max-w-7xl mx-auto px-4 md:px-0 mt-2 md:mt-12">
       <Swiper
@@ -25,7 +27,7 @@ const WinterHeroSlider = () => {
         pagination={{ clickable: true }}
         effect="fade"
         autoplay={{ delay: 4000, disableOnInteraction: false }}
-        loop
+        loop={loopEnabled}
         className="rounded md:rounded-xl overflow-hidden shadow-lg"
       >
         {slides.map((slide) => (
