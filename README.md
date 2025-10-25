@@ -1,16 +1,61 @@
-# React + Vite
+# 🐾 Warm Paws
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern pet care service platform built with **React 19**, **Tailwind CSS**, and **Firebase Authentication** — designed to connect pet owners with trusted pet services.  
+The project focuses on clean UI, smooth animations, and responsive design for all devices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## React Compiler
+🔗 **Live Site:** [https://your-live-site-url.com](https://your-live-site-url.com)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🎯 Purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Warm Paws is created to help users:
+
+- Find and explore pet care services.
+- Register/login securely with Firebase Authentication.
+- View personalized profile information (with photo & name).
+- Enjoy smooth transitions and animations for an engaging UI.
+
+---
+
+## ✨ Key Features
+
+- 🐶 **Firebase Authentication** (Email & Password)
+- 🖼️ **Dynamic User Profile** with name & photo update
+- 📱 **Fully Responsive** (mobile-first)
+- 💫 **Smooth Animations** powered by `framer-motion` & `animate.css`
+- 🎨 **Modern UI Components** using `Tailwind CSS` + `daisyUI`
+- 🔥 **Toast Notifications** via `react-hot-toast`
+- 🚀 **Auto Image Carousel** powered by `Swiper`
+- 🧭 **SPA Navigation** using `react-router`
+- ⚙️ **Modular Component-Based Architecture**
+
+---
+
+## 🧩 Tech Stack & NPM Packages
+
+| Category          | Package                       | Description                              |
+| ----------------- | ----------------------------- | ---------------------------------------- |
+| **Core**          | `react` `react-dom`           | React 19 core libraries                  |
+| **Routing**       | `react-router`                | Client-side routing                      |
+| **Styling**       | `tailwindcss` `daisyui`       | Modern UI & component styling            |
+| **Animation**     | `framer-motion` `animate.css` | Smooth, interactive animations           |
+| **Notifications** | `react-hot-toast`             | Beautiful toast messages                 |
+| **Firebase**      | `firebase`                    | User authentication & profile management |
+| **Swiper**        | `swiper`                      | Responsive image slider for hero section |
+| **Icons**         | `react-icons`                 | Icon library for UI                      |
+| **Build Tool**    | `@tailwindcss/vite`           | Tailwind integration for Vite            |
+
+---
+
+## 🛠️ Installation & Setup
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/petcare-hub.git
+   cd petcare-hub
+   ```
