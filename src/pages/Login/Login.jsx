@@ -46,7 +46,7 @@ const Login = () => {
         toast.success(`Welcome back, ${user.displayName || "Guest!"} 👋`);
         navigate(`${location.state ? location.state : "/"}`);
       })
-      .then((err) => {
+      .catch((err) => {
         const message = err.message;
         toast.error(`${message}, Login failed! Please try again.`);
       });

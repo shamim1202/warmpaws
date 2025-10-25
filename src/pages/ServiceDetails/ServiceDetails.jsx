@@ -13,7 +13,6 @@ const ServiceDetails = () => {
   const [allService, setAllService] = useState({});
   const navigate = useNavigate();
 
-  usePageTitle(`${serviceName}`);
 
   useEffect(() => {
     const service = services.find((item) => item.serviceId === parseInt(id));
@@ -39,6 +38,8 @@ const ServiceDetails = () => {
     slotsAvailable,
     category,
   } = allService;
+
+  usePageTitle(`${serviceName}`);
 
   if (loading) return <PageLoader></PageLoader>;
 

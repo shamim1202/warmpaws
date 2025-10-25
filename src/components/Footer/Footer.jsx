@@ -10,10 +10,10 @@ const Footer = () => {
           <div>
             <h2 className="md:text-lg font-semibold mb-3">Contact Info</h2>
             <p className="text-sm md:text-base">
-              123 Main Street, City, Country
+              Bazar Road, Muladi, Barishal, Bangladesh
             </p>
-            <p className="text-sm md:text-base">Email: support@mybrand.com</p>
-            <p className="text-sm md:text-base">Phone: +1 (555) 123-4567</p>
+            <p className="text-sm md:text-base">Email: support@warm-paws.com</p>
+            <p className="text-sm md:text-base">Phone: +88 0177 937 0001</p>
           </div>
 
           {/* ------- Social Links ------- */}
