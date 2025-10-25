@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import { usePageTitle } from "../../hooks/usePageTitle";
 
 const ErrorPage = () => {
+  usePageTitle("Error- Page not found");
+
   return (
     <main className="min-h-screen flex items-center justify-center bg-linear-to-r from-sky-100 via-pink-100 to-violet-100 p-6">
       <section className="max-w-6xl w-full bg-linear-to-r from-sky-50 via-pink-50 to-violet-50 rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
@@ -41,7 +44,6 @@ const ErrorPage = () => {
             >
               Go Home
             </Link>
-            
           </div>
         </div>
       </section>

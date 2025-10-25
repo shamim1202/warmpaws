@@ -63,7 +63,7 @@ const NavBar = () => {
 
   if (loading) return <PageLoader></PageLoader>;
   return (
-      <div className="navbar bg-linear-to-r from-sky-100 via-pink-100 to-violet-100">
+      <div className="navbar bg-linear-to-r from-sky-100 via-pink-100 to-violet-100 md:rounded">
         {/* ------------------- Start -------------------- */}
         <div className="navbar-start">
           {/* -------------- Logo ------------ */}

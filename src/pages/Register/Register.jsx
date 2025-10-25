@@ -1,7 +1,9 @@
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router";
 import PageLoader from "../../components/PageLoader/PageLoader";
+import { usePageTitle } from "../../hooks/usePageTitle";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
@@ -9,6 +11,7 @@ const Register = () => {
     useContext(AuthContext);
   const [nameError, setNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -81,10 +84,11 @@ const Register = () => {
       });
   };
 
-  if(loading) return <PageLoader></PageLoader>
+  if (loading) return <PageLoader></PageLoader>;
+  usePageTitle("Register")
 
   return (
-    <div className="py-6 md:py-12 flex flex-col items-center justify-center  px-4">
+    <div className="py-6 md:py-12 flex flex-col items-center justify-center px-4 md:rounded">
       {/* ---- Login Card ---- */}
       <div className="card w-full max-w-md shadow-xl hover:shadow-2xl transition-all duration-300">
         {loading && <PageLoader message="Logging you in..." type="dots" />}
@@ -135,14 +139,35 @@ const Register = () => {
             />
 
             {/* --------> Password <---------- */}
-            <label className="label text-sm md:text-lg mt-3">Password</label>
+            {/* <label className="label text-sm md:text-lg mt-3">Password</label>
             <input
               type="password"
               name="password"
               className="input input-bordered w-full text-xs md:text-sm"
               placeholder="Password"
               required
-            />
+            /> */}
+
+            <label className="label text-sm md:text-lg mt-3">Password</label>
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                className="input input-bordered w-full text-xs md:text-sm pr-10"
+                placeholder="Password"
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-primary"
+              >
+                <span className="md:text-xl">
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </span>
+              </button>
+            </div>
+
             {/* ---------- password error ---------- */}
             {passwordError && (
               <p className="text-red-500 text-xs md:text-sm mt-1 animate__animated animate__fadeIn">

@@ -1,6 +1,6 @@
 # 🐾 Warm Paws
 
-A modern pet care service platform built with **React 19**, **Tailwind CSS**, and **Firebase Authentication** — designed to connect pet owners with trusted pet services.  
+A modern winter pet care service platform built with **React 19**, **Tailwind CSS**, and **Firebase Authentication** — designed to connect pet owners with trusted winter pet services.  
 The project focuses on clean UI, smooth animations, and responsive design for all devices.
 
 ---
@@ -15,7 +15,7 @@ The project focuses on clean UI, smooth animations, and responsive design for al
 
 Warm Paws is created to help users:
 
-- Find and explore pet care services.
+- Find and explore winter pet care services.
 - Register/login securely with Firebase Authentication.
 - View personalized profile information (with photo & name).
 - Enjoy smooth transitions and animations for an engaging UI.
