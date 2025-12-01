@@ -1,23 +1,23 @@
 import { useLoaderData } from "react-router";
-import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import { usePageTitle } from "../../hooks/usePageTitle";
+import PetCard from "../../components/PetCard/PetCard";
 
-const Services = () => {
-  const services = useLoaderData();
-  usePageTitle("Services")
+const Pets = () => {
+  const pets = useLoaderData();
+  usePageTitle("All Available Pets");
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-0 my-10 md:my-20">
       <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-10">
-        Our Pet Care Services 🐾
+        Available Pets
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-        {services.map((service) => (
-          <ServiceCard key={service.serviceId} service={service}></ServiceCard>
+        {pets.map((pet) => (
+          <PetCard key={pet.id} pet={pet}></PetCard>
         ))}
       </div>
     </div>
   );
 };
 
-export default Services;
+export default Pets;

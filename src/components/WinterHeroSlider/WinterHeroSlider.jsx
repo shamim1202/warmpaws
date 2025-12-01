@@ -33,7 +33,7 @@ const WinterHeroSlider = () => {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div
-              className="relative h-[300px] md:h-[500px] flex items-center justify-center text-white"
+              className="relative h-[300px] md:h-[60vh] flex items-center justify-center text-white"
               style={{
                 backgroundImage: `url(${slide.img})`,
                 backgroundSize: "cover",

@@ -11,6 +11,7 @@ import Register from "../pages/Register/Register";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import Services from "../pages/Services/Services";
 import PrivateRoute from "../providers/PrivateRoute";
+import Pets from "../pages/Pets/Pets";
 
 const router = createBrowserRouter([
   {
@@ -31,16 +32,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/service_details/:id",
-        element: (
-          <PrivateRoute>
-            <ServiceDetails></ServiceDetails>
-          </PrivateRoute>
-        ),
+        Component: ServiceDetails,
         loader: () => fetch("/PetServices.json"),
+        hydrateFallbackElement: <PageLoader></PageLoader>
+      },
+      {
+        path: "/pets",
+        loader: () => fetch("/Pets.json"),
+        Component: Pets,
         hydrateFallbackElement: <PageLoader></PageLoader>
       },
     ],
   },
+
   {
     path: "/auth",
     Component: AuthLayout,
@@ -59,6 +63,7 @@ const router = createBrowserRouter([
       }
     ],
   },
+  
   {
     path: "/profile",
     element: (

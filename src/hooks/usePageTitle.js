@@ -5,3 +5,5 @@ export function usePageTitle(title) {
     document.title = `Warm Paws | ${title}`;
   }, [title]);
 }
+
+
