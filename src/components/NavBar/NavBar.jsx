@@ -89,7 +89,7 @@ const NavBar = () => {
 
   if (loading) return <PageLoader></PageLoader>;
   return (
-    <div className="navbar bg-cyan-50 md:rounded">
+    <div className="navbar bg-sky-50 md:rounded">
       {/* ------------------- Start -------------------- */}
       <div className="navbar-start">
         {/* -------------- Logo ------------ */}

@@ -45,9 +45,9 @@ const ServiceDetails = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-4 md:p-10 mt-2 md:mt-8 bg-linear-to-r from-purple-100 via-green-100 to-rose-100 rounded md:rounded-xl">
-      <div className="flex flex-col items-center justify-center rounded md:rounded-xl">
+      <div className="flex flex-col md:flex-row items-center justify-between rounded md:rounded-xl">
         {/* ---- Image ---- */}
-        <div className="w-full md:w-3/5 md:mb-8">
+        <div className="flex-1 md:w-3/5 md:mb-8">
           <img
             src={image}
             alt={""}
@@ -55,7 +55,7 @@ const ServiceDetails = () => {
           />
         </div>
 
-        <div className="w-full rounded md:rounded-xl overflow-hidden flex flex-col md:flex-row items-center md:items-start">
+        <div className="flex-1 rounded md:rounded-xl overflow-hidden flex flex-col md:flex-row items-center md:items-start">
           {/* -------------- Details -------------- */}
           <div className="w-full p-4 md:p-8 md:space-y-4">
             <div className="flex flex-col md:flex-row md:items-center justify-between">
@@ -99,16 +99,10 @@ const ServiceDetails = () => {
                 Slot Available: {slotsAvailable}
               </span>
             </div>
-
-            {/* ---- Back Button ---- */}
-            <button
-              onClick={() => navigate(-1)}
-              className="text-blue-500 hover:text-blue-700 transition-colors flex items-center gap-2 btn btn-outline btn-sm md:btn-md w-full md:w-auto mt-2.5"
-            >
-              <TiArrowLeftThick /> Back
-            </button>
           </div>
         </div>
+      </div>
+      <div className="md:w-fit md:mx-auto mx-10 my-4 md:my-8 border-t-2 md:border-t-4 border-amber-200">
         <BookService></BookService>
       </div>
     </div>

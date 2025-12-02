@@ -11,7 +11,7 @@ const Pets = () => {
       <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-10">
         Available Pets
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-x-6 md:gap-y-10">
         {pets.map((pet) => (
           <PetCard key={pet.id} pet={pet}></PetCard>
         ))}

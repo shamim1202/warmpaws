@@ -9,7 +9,7 @@ const PopularServices = ({ services }) => {
     <div>
       <section className="max-w-7xl mx-auto px-4 md:px-0 py-10 md:py-20">
         <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-10">
-          Discover Our Popular Pet Services ⭐
+          Discover Our Featured Pet Services ⭐
         </h2>
 
         <div className="grid gap-6 grid-cols-1 md:grid-cols-3">

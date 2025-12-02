@@ -6,6 +6,8 @@ import WinterHeroSlider from "../../components/WinterHeroSlider/WinterHeroSlider
 import WinterQuiz from "../../components/WinterQuiz/WinterQuiz";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import Services from "../Services/Services";
+import TopPets from "../../components/TopPets/TopPets";
+import FeaturedService from "../../components/FeaturedService/FeaturedService";
 
 const Home = () => {
   usePageTitle("Home");
@@ -14,9 +16,11 @@ const Home = () => {
   return (
     <div>
       <WinterHeroSlider></WinterHeroSlider>
-      <Services></Services>
+      {/* <Services></Services> */}
+      <FeaturedService></FeaturedService>
       <WinterCareTips></WinterCareTips>
-      <PopularServices services={services}></PopularServices>
+      {/* <PopularServices services={services}></PopularServices> */}
+      <TopPets></TopPets>
       <WinterQuiz></WinterQuiz>
       <MeetOurVetExperts></MeetOurVetExperts>
     </div>

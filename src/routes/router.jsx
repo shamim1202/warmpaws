@@ -12,6 +12,7 @@ import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import Services from "../pages/Services/Services";
 import PrivateRoute from "../providers/PrivateRoute";
 import Pets from "../pages/Pets/Pets";
+import PetDetails from "../pages/PetDetails/PetDetails";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch("/PetServices.json"),
+        // loader: () => fetch("/PetServices.json"),
         Component: Home,
         hydrateFallbackElement: <PageLoader></PageLoader>
       },
@@ -40,6 +41,12 @@ const router = createBrowserRouter([
         path: "/pets",
         loader: () => fetch("/Pets.json"),
         Component: Pets,
+        hydrateFallbackElement: <PageLoader></PageLoader>
+      },
+      {
+        path: "/pet_details/:id",
+        Component: PetDetails,
+        loader: () => fetch("/Pets.json"),
         hydrateFallbackElement: <PageLoader></PageLoader>
       },
     ],

@@ -70,5 +70,79 @@
     "description": "Winter brings unique challenges to pet nutrition, as pets often experience decreased outdoor activity, colder temperatures, and increased energy demands to maintain body warmth. HealthyPaws Vet offers Winter Nutrition Consultations to provide pet owners with professional guidance on how to support their pets’ health, energy levels, and immune system during the cold months. Our consultation includes a detailed assessment of your pet’s age, breed, weight, activity level, and any pre-existing health conditions to create a personalized winter diet plan. Recommendations include adjusting caloric intake, selecting nutrient-rich foods, incorporating supplements such as omega fatty acids and vitamins, and providing hydration strategies to prevent dehydration caused by indoor heating. Additionally, we advise on safe seasonal treats and how to balance indulgences with overall dietary needs to maintain optimal weight and health. Winter nutrition consultations also cover feeding schedules, portion control, and ways to encourage appetite in pets who may eat less during colder months. Proper winter nutrition supports coat health, skin hydration, joint function, and immune response, helping pets thrive even in harsh conditions. By offering guidance tailored to each pet, HealthyPaws Vet ensures that owners have the tools and knowledge to make informed dietary choices that promote long-term health and comfort. This service emphasizes a holistic approach to winter pet care, combining diet, wellness, and preventive strategies to ensure that pets remain energetic, healthy, and happy throughout the season.",
     "image": "https://i.ibb.co.com/GQXwPPs3/Winter-Nutrition-Consultation.jpg",
     "category": "Nutrition"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Winter Health Checkup for Pets",
+    "providerName": "FrostVet Care Center",
+    "providerEmail": "care@frostvet.com",
+    "price": 45,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "Winter months can significantly affect pets’ immune systems, respiratory health, and joint flexibility. FrostVet Care Center offers a comprehensive winter health checkup designed to detect seasonal issues early and protect your pets from cold-related illnesses. During the checkup, veterinarians examine your pet’s lungs, joints, heart, skin, and overall physical condition. We also perform temperature regulation tests and assess hydration levels, as indoor heating often leads to dryness. Special attention is given to senior pets and pets with arthritis or chronic respiratory problems. The checkup includes personalized guidance on nutrition, supplements, coat care, warm bedding, and safe winter practices. Our goal is to help pet owners maintain their pets’ health and comfort throughout harsh winter conditions through preventive care and expert recommendations.",
+    "image": "https://i.ibb.co.com/Q74hJrFD/Winter-Health-Checkup-for-Pets.jpg",
+    "category": "Veterinary"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Snow Walk Assistance for Dogs",
+    "providerName": "PawTrack Services",
+    "providerEmail": "walk@pawtrack.com",
+    "price": 28,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Snowy and icy conditions make outdoor walks challenging and sometimes unsafe for dogs. PawTrack Services provides professional snow walk assistance designed to support dogs that need guidance, stability, and safety during winter walks. Our trained handlers use winter-safe harnesses, paw grip boots, and reflective gear to ensure maximum protection. We adjust walk duration and intensity depending on your dog’s age, breed, and health condition. Handlers also monitor temperature and ensure your pet avoids slippery surfaces, harmful ice melts, and deep snow. This service is especially helpful for small breed dogs, senior dogs, and pets recovering from injuries. With snow walk assistance, pets stay active, confident, and healthy while enjoying outdoor time during harsh winter weather.",
+    "image": "https://i.ibb.co.com/XkXqb1cS/Snow-Walk-Assistance-for-Dogs.webp",
+    "category": "Activity"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Cozy Winter Pet Photography",
+    "providerName": "WarmLens Studio",
+    "providerEmail": "studio@warmlens.com",
+    "price": 60,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Celebrate your pet’s winter moments with our Cozy Winter Pet Photography session, specially designed to capture warm, adorable, and festive memories. WarmLens Studio creates themed indoor and outdoor winter setups, including snow props, cozy blankets, warm lighting, and holiday decorations. Our photographers specialize in animal behavior, ensuring pets stay relaxed, comfortable, and engaged during the photoshoot. We use high-resolution cameras, safe lighting, and calming techniques to capture your pet’s personality beautifully. Whether you want a festive holiday portrait, a playful snow-themed session, or heartwarming winter family photos with your pet, our service offers professional editing, digital copies, and printed packages. These photos become lasting memories that owners cherish for years.",
+    "image": "https://i.ibb.co.com/PZ15GGDB/Cozy-Winter-Pet-Photography.jpg",
+    "category": "Photography"
+  },
+  {
+    "serviceId": 10,
+    "serviceName": "Emergency Winter Pet First Aid",
+    "providerName": "PetShield Emergency Care",
+    "providerEmail": "emergency@petshield.com",
+    "price": 55,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "Cold weather increases the risk of frostbite, hypothermia, dehydration, and paw injuries for pets. PetShield Emergency Care offers a specialized winter first aid service tailored to address urgent cold-related conditions. Our trained technicians handle immediate cases such as frozen paw pads, ice accumulation between toes, rapid temperature drops, and exposure-related illnesses. We use warm compress treatments, hydration support, safe heating pads, and emergency stabilization techniques. The service also includes a short consultation teaching pet owners how to identify early danger signs, apply basic winter first aid, and prevent emergencies in freezing conditions. By providing quick and professional assistance, we ensure pets receive life-saving care when it matters the most.",
+    "image": "https://i.ibb.co.com/Cs5HBMrt/Emergency-Winter-Pet-First-Aid.jpg",
+    "category": "Emergency"
+  },
+  {
+    "serviceId": 11,
+    "serviceName": "Winter Fur Conditioning & Hydration",
+    "providerName": "FurGlow Spa",
+    "providerEmail": "spa@furglo.com",
+    "price": 35,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Dry winter air and indoor heating can make your pet’s fur brittle, dull, and prone to shedding. FurGlow Spa offers a winter fur conditioning and hydration service specially designed to restore softness, shine, and moisture to your pet’s coat. We use premium winter-safe conditioners, hydrating masks, and nourishing oils that penetrate deep into the fur and skin. This treatment helps reduce itching, dandruff, and dryness, while improving coat elasticity and warmth retention. Our grooming specialists tailor each session based on breed and coat type. For long-haired dogs and cats, we also provide detangling and trimming support in sensitive areas. The result is a soft, shiny, healthy winter coat that keeps pets comfortable and protected.",
+    "image": "https://i.ibb.co.com/5gkT6tsY/Winter-Fur-Conditioning-Hydration.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 12,
+    "serviceName": "Winter Pet Boarding & Heated Suites",
+    "providerName": "SnowHaven Pet Lodge",
+    "providerEmail": "lodge@snowhaven.com",
+    "price": 70,
+    "rating": 4.8,
+    "slotsAvailable": 7,
+    "description": "SnowHaven Pet Lodge offers premium winter boarding services featuring fully heated suites that keep pets warm and comfortable during the coldest months. Our facility includes insulated rooms, warm bedding, climate control, and a 24/7 monitoring system to ensure pets remain safe. Winter-friendly activities, indoor play sessions, and nutritious seasonal meals are provided throughout their stay. We offer separate accommodations for cats and dogs to ensure a peaceful, stress-free environment. Elderly pets and pets with special medical needs receive extra care, including joint-friendly warm pads and monitored medication routines. SnowHaven Pet Lodge provides a home-like winter experience where pets feel safe, cozy, and loved while owners are away.",
+    "image": "https://i.ibb.co.com/Q7qSFmZY/Winter-Pet-Boarding-Heated-Suites.webp",
+    "category": "Boarding"
   }
 ]
+
+

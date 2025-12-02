@@ -7,9 +7,11 @@
     "age": "2 years",
     "gender": "Male",
     "size": "Large",
-    "image": "https://example.com/images/buddy.jpg",
+    "image": "https://i.ibb.co.com/JWj8KGHg/Golden-Retriever.jpg",
     "status": "Available",
     "price": 20000,
+    "sellerName": "John Doe",
+    "sellerEmail": "johndoe@example.com",
     "description": "Buddy is a friendly and energetic Golden Retriever who loves playing fetch and running outdoors. He is very affectionate and gets along well with children and other pets. Buddy enjoys being part of a family environment and thrives on regular exercise and mental stimulation. His gentle nature and playful attitude make him an ideal companion for active families who love spending time outdoors."
   },
   {
@@ -20,9 +22,11 @@
     "age": "1 year",
     "gender": "Female",
     "size": "Small",
-    "image": "https://example.com/images/mittens.jpg",
+    "image": "https://i.ibb.co.com/Xxh9VVkY/Siamese-2.jpg",
     "status": "Available",
     "price": 6000,
+    "sellerName": "Emma Watson",
+    "sellerEmail": "emmawatson@example.com",
     "description": "Mittens is a curious and affectionate Siamese cat with a sleek coat and striking blue eyes. She enjoys exploring new spaces and loves interactive toys that challenge her intelligence. Mittens is very social and enjoys spending time with humans, often curling up on laps for long naps. She is a perfect choice for someone looking for a playful yet loving companion who can bring warmth and joy into their home."
   },
   {
@@ -33,9 +37,11 @@
     "age": "3 years",
     "gender": "Male",
     "size": "Medium",
-    "image": "https://example.com/images/charlie.jpg",
+    "image": "https://i.ibb.co.com/93VM8SrF/Beagle.jpg",
     "status": "Available",
     "price": 18000,
+    "sellerName": "Michael Smith",
+    "sellerEmail": "michael@example.com",
     "description": "Charlie is an energetic and friendly Beagle who loves outdoor adventures and exploring new places. He has a keen sense of smell and enjoys sniffing around during walks. Charlie gets along very well with children and other pets, making him a great addition to any family. He is playful, intelligent, and always eager to learn new tricks, which makes him ideal for families who can provide consistent training and regular activity."
   },
   {
@@ -46,9 +52,11 @@
     "age": "2 years",
     "gender": "Female",
     "size": "Large",
-    "image": "https://example.com/images/luna.jpg",
+    "image": "https://i.ibb.co.com/pjcsBtjH/Maine-Coon.jpg",
     "status": "Available",
     "price": 4000,
+    "sellerName": "Sophia Brown",
+    "sellerEmail": "sophia@example.com",
     "description": "Luna is a gentle and majestic Maine Coon cat with a long, luxurious coat. She is very calm and enjoys lounging in quiet spaces, making her ideal for homes that value a peaceful atmosphere. Luna is affectionate and loves attention from her human companions. She is intelligent, easily trainable, and enjoys interactive play sessions that stimulate her mind. Luna thrives in a loving environment where she can be pampered and cared for."
   },
   {
@@ -59,9 +67,11 @@
     "age": "4 years",
     "gender": "Male",
     "size": "Medium",
-    "image": "https://example.com/images/max.jpg",
+    "image": "https://i.ibb.co.com/hz9w53M/bull-dog.jpg",
     "status": "Available",
     "price": 25000,
+    "sellerName": "William Lee",
+    "sellerEmail": "william@example.com",
     "description": "Max is a calm and loyal Bulldog who loves spending time with his family. He has a gentle temperament and is very patient with children. Max enjoys short walks and lounging around the house. He is low-maintenance but enjoys attention and affection from his owners. Max is ideal for families looking for a devoted, loving pet who provides comfort and companionship without needing excessive exercise."
   },
   {
@@ -72,9 +82,11 @@
     "age": "1.5 years",
     "gender": "Female",
     "size": "Medium",
-    "image": "https://example.com/images/coco.jpg",
+    "image": "https://i.ibb.co.com/gxXGx5t/Persian.jpg",
     "status": "Available",
     "price": 8000,
+    "sellerName": "Olivia Johnson",
+    "sellerEmail": "olivia@example.com",
     "description": "Coco is a beautiful Persian cat with a calm and affectionate personality. She loves quiet environments and enjoys sitting by windows watching the outside world. Coco is playful in short bursts and enjoys gentle interaction with her human companions. She is perfect for someone seeking a low-energy, loving cat who appreciates a peaceful home and consistent care. Her luxurious fur requires regular grooming, which makes her a perfect companion for someone who enjoys pampering pets."
   },
   {
@@ -85,9 +97,11 @@
     "age": "3 years",
     "gender": "Male",
     "size": "Large",
-    "image": "https://example.com/images/rocky.jpg",
+    "image": "https://i.ibb.co.com/fzJPYRtR/German-Shepherd.jpg",
     "status": "Available",
     "price": 45000,
+    "sellerName": "Emma Davis",
+    "sellerEmail": "emma.d@example.com",
     "description": "Rocky is an intelligent and protective German Shepherd who loves being active and engaged. He enjoys outdoor activities, obedience training, and playing games with his human companions. Rocky is loyal, alert, and makes an excellent family companion. He thrives in environments where he receives both mental and physical stimulation. His social nature allows him to interact well with other pets while still maintaining a protective instinct for his family."
   },
   {
@@ -98,9 +112,11 @@
     "age": "2 years",
     "gender": "Female",
     "size": "Medium",
-    "image": "https://example.com/images/daisy.jpg",
+    "image": "https://i.ibb.co.com/tP26xfdW/Bengal.jpg",
     "status": "Available",
     "price": 2000,
+    "sellerName": "James Wilson",
+    "sellerEmail": "jamesw@example.com",
     "description": "Daisy is a playful and energetic Bengal cat with striking patterns on her coat. She loves climbing, exploring, and interactive play that challenges her intelligence. Daisy is very social, enjoys attention from her human companions, and is comfortable around other pets. She is ideal for active households that can provide mental and physical stimulation. Daisy brings excitement and fun to any home while being affectionate and loyal to her owners."
   },
   {
@@ -111,9 +127,11 @@
     "age": "2 years",
     "gender": "Female",
     "size": "Medium",
-    "image": "https://example.com/images/bella.jpg",
+    "image": "https://i.ibb.co.com/ZbB1rQJ/Poodle.jpg",
     "status": "Available",
     "price": 12000,
+    "sellerName": "Sophia Martinez",
+    "sellerEmail": "sophia.m@example.com",
     "description": "Bella is an intelligent and active Poodle who loves learning new tricks and participating in playful activities. She is highly trainable and enjoys mental stimulation as much as physical exercise. Bella is affectionate, social, and gets along well with children and other pets. She thrives in households where she receives attention and consistent care. Her playful nature and enthusiasm make her an excellent companion for families and individuals who enjoy an interactive pet."
   },
   {
@@ -124,9 +142,11 @@
     "age": "1.5 years",
     "gender": "Male",
     "size": "Small",
-    "image": "https://example.com/images/milo.jpg",
+    "image": "https://i.ibb.co.com/v66SK0Vg/Siamese.jpg",
     "status": "Available",
     "price": 3500,
+    "sellerName": "Daniel Thompson",
+    "sellerEmail": "daniel@example.com",
     "description": "Milo is a charming and intelligent Siamese cat with a curious personality. He enjoys exploring new areas, interacting with his human companions, and playing with interactive toys. Milo is social and loves cuddling after energetic play sessions. He is ideal for someone seeking an affectionate, engaging cat who can provide companionship and entertainment. His vocal and expressive nature makes him a delightful addition to any loving household."
   },
   {
@@ -137,9 +157,11 @@
     "age": "3 years",
     "gender": "Male",
     "size": "Large",
-    "image": "https://example.com/images/rockyjr.jpg",
+    "image": "https://i.ibb.co.com/39PSKsrS/Labrador-Retriever.jpg",
     "status": "Available",
     "price": 32000,
+    "sellerName": "Grace Anderson",
+    "sellerEmail": "gracea@example.com",
     "description": "Rocky Jr. is a playful and friendly Labrador Retriever who loves swimming, running, and playing fetch. He is highly sociable and enjoys spending time with children and other pets. Rocky Jr. is intelligent, eager to please, and responds well to training. He thrives in active households that can provide daily exercise and interaction. His loving personality and boundless energy make him an ideal companion for families seeking a fun and loyal dog."
   },
   {
@@ -150,9 +172,11 @@
     "age": "2 years",
     "gender": "Female",
     "size": "Large",
-    "image": "https://example.com/images/lily.jpg",
+    "image": "https://i.ibb.co.com/dwYt8rZF/Ragdoll.jpg",
     "status": "Available",
     "price": 2800,
+    "sellerName": "Henry Clark",
+    "sellerEmail": "henryc@example.com",
     "description": "Lily is a gentle and affectionate Ragdoll cat known for her calm and loving nature. She enjoys lounging, being petted, and curling up with her human companions. Lily is social but not overly active, making her perfect for homes looking for a relaxed, loving feline. She gets along well with other pets and adapts easily to new environments. Her plush coat and sweet demeanor make her a wonderful addition to any family seeking a devoted cat."
   }
 ]
