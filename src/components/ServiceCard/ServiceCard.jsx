@@ -17,7 +17,7 @@ const ServiceCard = ({ service }) => {
       <img src={image} alt={serviceName} className="w-full h-40 object-cover" />
 
       {/* ------------------- Card content ------------------- */}
-      <div className="p-2 md:p-4 flex flex-col gap-2 md:gap-3 md:h-full bg-linear-to-r from-sky-50 via-pink-50 to-violet-50 ">
+      <div className="p-3 md:p-5 flex flex-col gap-2 md:gap-3 md:h-full bg-linear-to-r from-sky-50 via-pink-50 to-violet-50 ">
         <div className="md:h-34">
           <h3 className="md:text-lg font-semibold mb-2">{serviceName}</h3>
 
@@ -58,7 +58,7 @@ const ServiceCard = ({ service }) => {
           to={`/service_details/${serviceId}`}
           className="btn btn-primary btn-sm md:btn-md w-full text-center"
         >
-          View More
+          View Details
         </Link>
       </div>
     </div>

@@ -32,7 +32,7 @@ const WinterQuiz = () => {
   };
 
   return (
-    <section className="winter-quiz p-6 bg-linear-to-r from-purple-100 via-green-100 to-rose-100 md:rounded shadow md:shadow-lg hover:shadow-xl transition-all duration-300 max-w-xl mx-auto mb-10 md:mb-14">
+    <section className="winter-quiz p-6 bg-sky-50 md:rounded shadow md:shadow-lg hover:shadow-xl transition-all duration-300 max-w-xl mx-auto mb-10 md:mb-14">
       <h2 className="text-xl md:text-2xl font-bold mb-4 text-center">
         Is Your Pet Winter-Ready?
       </h2>

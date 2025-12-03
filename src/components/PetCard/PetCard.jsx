@@ -8,7 +8,7 @@ const PetCard = ({ pet }) => {
       <img src={image} alt={name} className="w-full h-40 object-cover" />
 
       {/* ------------------- Card content ------------------- */}
-      <div className="p-2 md:p-4 flex flex-col gap-2 md:gap-3  bg-linear-to-r from-sky-50 via-pink-50 to-violet-50 ">
+      <div className="p-3 md:p-5 flex flex-col gap-2 md:gap-3  bg-linear-to-r from-sky-50 via-pink-50 to-violet-50">
         <div className="md:h-32">
           <h3 className="md:text-xl font-semibold mb-2">{name}</h3>
 
@@ -38,7 +38,7 @@ const PetCard = ({ pet }) => {
           to={`/pet_details/${id}`}
           className="btn btn-primary btn-sm md:btn-md w-full text-center"
         >
-          View More
+          View Details
         </Link>
       </div>
     </div>

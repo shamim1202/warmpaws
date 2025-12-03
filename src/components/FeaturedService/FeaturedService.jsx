@@ -12,10 +12,10 @@ const FeaturedService = () => {
       .then((data) => setPets(data));
   }, []);
 
-  const fourPets = pets.slice(0, 8);
+  const fourPets = pets.slice(0, 4);
 
   return (
-    <div className="px-6 py-10">
+    <div className="my-10 px-6 md:my-20 md:px-0">
       <h1 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-10">
         Our Featured Pet Care Services
       </h1>
@@ -28,7 +28,7 @@ const FeaturedService = () => {
       </div>
 
       {/* See All Button */}
-      <div className="text-center mt-8">
+      <div className="text-center mt-4 md:mt-8">
         <button
           onClick={() => navigate("/services")}
           className="btn btn-primary btn-sm md:btn-md transition-all"

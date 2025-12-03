@@ -20,7 +20,7 @@ const WinterHeroSlider = () => {
   const loopEnabled = slides.length > 1;
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 md:px-0 mt-2 md:mt-12">
+    <div className="w-full max-w-7xl mx-auto px-4 md:px-0 mt-2 md:mt-12 md:mb-20">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         navigation
