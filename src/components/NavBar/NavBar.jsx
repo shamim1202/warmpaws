@@ -140,22 +140,16 @@ const NavBar = () => {
       {/* ------------------- End ---------------------- */}
       <div className="navbar-end">
         <div className="flex items-center gap-2 md:gap-3">
-          <div className="flex flex-row items-center gap-1 md:gap-2">
-            <p className="text-xs md:text-sm font-semibold">
-              {user && user.displayName}
-            </p>
-
-            <div className="avatar">
-              <div className="w-7 md:w-11 rounded-full">
-                <img
-                  src={`${
-                    user
-                      ? user.photoURL
-                      : "https://i.ibb.co.com/3YyzRrk9/user.png"
-                  }`}
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+          <div className="avatar">
+            <div className="w-7 md:w-11 rounded-full">
+              <img
+                src={`${
+                  user
+                    ? user.photoURL
+                    : "https://i.ibb.co.com/3YyzRrk9/user.png"
+                }`}
+                referrerPolicy="no-referrer"
+              />
             </div>
           </div>
 

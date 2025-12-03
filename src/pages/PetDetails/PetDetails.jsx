@@ -45,82 +45,76 @@ const PetDetails = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-4 md:p-8 mt-2 md:mt-8 bg-sky-50 rounded md:rounded-xl">
-      <div className="flex flex-col md:flex-row items-start justify-between rounded md:rounded-xl">
+      <div className="flex flex-col md:flex-row md:items-start justify-between rounded md:rounded-xl md:gap-5">
         {/* ---- Image ---- */}
-        <div className="flex-1 md:mb-8">
+        <div className="flex-1 mb-4 md:mb-0">
           <img
             src={image}
             alt={""}
-            className="w-full h-64 md:h-96 object-cover rounded md:rounded-xl transition-all duration-500 hover:scale-103"
+            className="w-full h-52 md:h-96 object-cover rounded md:rounded-xl transition-all duration-500 hover:scale-103"
           />
         </div>
 
         <div className="flex-1 rounded md:rounded-xl overflow-hidden flex flex-col md:flex-row items-center md:items-start">
           {/* -------------- Details -------------- */}
-          <div className="w-full p-4 md:p-6 md:space-y-2">
-            {/* ---- Back Button ---- */}
-            {/* <button
-              onClick={() => navigate(-1)}
-              className="text-blue-500 hover:text-blue-700 transition-colors flex items-center gap-2 btn btn-outline btn-sm md:btn-md w-full md:w-auto mt-2.5"
-            >
-              <TiArrowLeftThick /> Back
-            </button> */}
-
-            <div className="flex flex-col md:flex-row md:items-center justify-between">
-              <h2 className="text-xl md:text-3xl font-bold text-gray-800">
+          <div className="w-full px-4 md:px-6">
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+              <h2 className="text-xl md:text-3xl font-bold text-secondary">
                 {name}
               </h2>
             </div>
 
             {/* -------- Description --------- */}
-            <p className="w-full text-gray-600 text-xs md:text-base leading-relaxed">
-              <span className="font-medium md:font-semibold text-sm md:text-base">
-                Description :
+            <p className="w-full text-gray-600 text-xs md:text-base leading-relaxed mb-2">
+              <span className="text-sm md:text-base">
+                <strong>Description :</strong>
               </span>{" "}
               {description}
             </p>
 
-            <div className="mt-4 md:mt-0 md:space-y-1">
-              <div className="flex flex-row justify-between items-start md:items-center gap-1 text-gray-800">
-                <span className="font-medium md:font-semibold text-sm md:text-base">
-                  Type: {type}
+            <div className="mt-4 md:mt-0 space-y-1">
+              <div className="flex flex-row justify-between items-start md:items-center gap-1 text-gray-600">
+                <span className=" text-sm md:text-base">
+                  <strong>Type:</strong> {type}
                 </span>
-                <span className="font-medium md:font-semibold text-sm md:text-base">
-                  Breed: {breed}
-                </span>
-              </div>
-
-              <div className="flex flex-row justify-between items-start md:items-center gap-1 text-gray-800">
-                <span className="font-medium md:font-semibold text-sm md:text-base">
-                  Gender: {gender}
-                </span>
-                <span className="font-medium md:font-semibold text-sm md:text-base">
-                  Age: {age}
+                <span className=" text-sm md:text-base">
+                  <strong>Breed:</strong> {breed}
                 </span>
               </div>
 
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1 text-gray-800">
-                <span className="font-medium md:font-semibold text-sm md:text-base">
-                  Seller: {sellerName}
+              <div className="flex flex-row justify-between items-start md:items-center gap-1 text-gray-600">
+                <span className=" text-sm md:text-base">
+                  <strong>Gender:</strong> {gender}
                 </span>
-                <span className="font-medium md:font-semibold text-sm md:text-base">
-                  Email: {sellerEmail}
+                <span className=" text-sm md:text-base">
+                  <strong>Age:</strong> {age}
+                </span>
+              </div>
+
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1 text-gray-600">
+                <span className=" text-sm md:text-base">
+                  <strong>Seller:</strong> {sellerName}
+                </span>
+                <span className=" text-sm md:text-base">
+                  <strong>Email:</strong> {sellerEmail}
                 </span>
               </div>
 
               {/* -------- Price & Slots ------- */}
-              <div className="flex flex-row justify-between items-start md:items-center gap-1 text-gray-800">
-                <span className="font-medium md:font-semibold text-sm md:text-base">
-                  Price: ${price}
+              <div className="flex flex-row justify-between items-start md:items-center gap-1 text-gray-600">
+                <span className=" text-sm md:text-base">
+                  <strong>Price:</strong> ${price}
                 </span>
-                <span className="font-medium md:font-semibold text-sm md:text-base">
-                  Slot Available: {status}
+                <span className=" text-sm md:text-base">
+                  <strong>Slot Available:</strong> {status}
                 </span>
               </div>
             </div>
+            <button className="mt-3 md:mt-5 btn btn-primary btn-sm md:btn-md w-full">
+              Buy Now
+            </button>
           </div>
         </div>
-        {/* <BookService></BookService> */}
       </div>
     </div>
   );

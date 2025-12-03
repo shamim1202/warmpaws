@@ -11,7 +11,7 @@ const BookService = () => {
     <div>
       <div className="card w-full max-w-md shadow-xl hover:shadow-2xl transition-all duration-300">
         <form onSubmit={handleBooking} className="card-body">
-          <h3 className="text-blue-600 text-sm md:text-lg font-bold md:mt-4  text-center">
+          <h3 className="text-primary text-sm md:text-lg font-bold md:mt-4  text-center">
             Book Service
           </h3>
           <fieldset className="fieldset">

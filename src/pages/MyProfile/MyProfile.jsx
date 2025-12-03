@@ -57,7 +57,7 @@ const MyProfile = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <NavBar></NavBar>
-      <div className="mt-2 md:mt-8 py-10 px-4 flex flex-col items-center justify-center min-h-[80vh] bg-linear-to-r from-indigo-200 via-purple-200 to-pink-200 md:rounded">
+      <div className="mt-2 md:mt-8 py-10 px-4 flex flex-col items-center justify-center min-h-[80vh] bg-linear-to-r from-indigo-100 via-purple-100 to-pink-100 md:rounded">
         <div className="card w-full max-w-md shadow-xl hover:shadow-2xl transition-all duration-300">
           <div className="card-body items-center text-center">
             {/* ---- Profile Image ---- */}

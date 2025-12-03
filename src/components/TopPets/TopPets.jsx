@@ -16,7 +16,7 @@ const TopPets = () => {
 
   return (
     <div className="px-6 py-10 md:px-0 md:mb-10">
-      <h1 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-10">Our Featured Pets</h1>
+      <h1 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-10 text-primary">Our Featured Pets</h1>
 
       {/* 4 Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-6 md:gap-x-6 md:gap-y-10">

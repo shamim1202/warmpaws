@@ -16,7 +16,7 @@ const FeaturedService = () => {
 
   return (
     <div className="my-10 px-6 md:my-20 md:px-0">
-      <h1 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-10">
+      <h1 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-10 text-primary">
         Our Featured Pet Care Services
       </h1>
 

@@ -57,7 +57,7 @@ const MeetOurVetExperts = () => {
 
             {/* Name & Specialty */}
             <div className="py-3 md:py-5">
-              <h3 className="text-sm md:text-xl font-bold mb-1">{vet.name}</h3>
+              <h3 className="text-sm md:text-xl font-bold mb-1 text-secondary">{vet.name}</h3>
               <div className="space-y-2">
                 <p className="text-gray-800 text-xs md:text-base font-medium">
                   Experience: {vet.experience} years

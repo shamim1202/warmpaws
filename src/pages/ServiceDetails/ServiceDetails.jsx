@@ -13,7 +13,6 @@ const ServiceDetails = () => {
   const [allService, setAllService] = useState({});
   const navigate = useNavigate();
 
-
   useEffect(() => {
     const service = services.find((item) => item.serviceId === parseInt(id));
     setAllService(service);
@@ -45,41 +44,23 @@ const ServiceDetails = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-4 md:p-10 mt-2 md:mt-8 bg-linear-to-r from-purple-100 via-green-100 to-rose-100 rounded md:rounded-xl">
-      <div className="flex flex-col md:flex-row items-center justify-between rounded md:rounded-xl">
+      <div className="flex flex-col items-center justify-between rounded md:rounded-xl">
         {/* ---- Image ---- */}
-        <div className="flex-1 md:w-3/5 md:mb-8">
+        <div className="w-full p-4 md:p-8">
           <img
             src={image}
             alt={""}
-            className="w-full h-64 md:h-96 object-cover rounded md:rounded-xl transition-all duration-500 hover:scale-103"
+            className="w-full h-64 md:h-[450px] object-cover rounded md:rounded-xl transition-all duration-500 hover:scale-103"
           />
         </div>
 
-        <div className="flex-1 rounded md:rounded-xl overflow-hidden flex flex-col md:flex-row items-center md:items-start">
+        <div className="w-full p-4 md:p-8 rounded md:rounded-xl overflow-hidden flex flex-col md:flex-row items-center md:items-start">
           {/* -------------- Details -------------- */}
-          <div className="w-full p-4 md:p-8 md:space-y-4">
+          <div className="w-full  md:space-y-4">
             <div className="flex flex-col md:flex-row md:items-center justify-between">
-              <h2 className="text-xl md:text-3xl font-bold text-gray-800">
+              <h2 className="text-xl md:text-3xl font-bold text-primary">
                 {serviceName}
               </h2>
-            </div>
-
-            <div className="flex flex-row justify-between items-start md:items-center gap-1 mt-4 text-blue-600 md:mb-2">
-              <span className="font-medium md:font-semibold text-sm md:text-lg">
-                Category: {category}
-              </span>
-              <span className="font-medium md:font-semibold text-sm md:text-lg">
-                Rating: {rating}
-              </span>
-            </div>
-
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1 mt-2 md:mt-4 text-blue-600 mb-2">
-              <span className="font-medium md:font-semibold text-sm md:text-lg">
-                Provider: {providerName}
-              </span>
-              <span className="font-medium md:font-semibold text-sm md:text-lg">
-                Email: {providerEmail}
-              </span>
             </div>
 
             {/* -------- Description --------- */}
@@ -90,19 +71,37 @@ const ServiceDetails = () => {
               {description}
             </p>
 
-            {/* -------- Price & Slots ------- */}
-            <div className="flex flex-row justify-between items-start md:items-center gap-1 mt-4 text-blue-600">
-              <span className="font-medium md:font-semibold text-sm md:text-lg">
-                Price: ${price}
+            <div className="flex flex-row justify-between items-start md:items-center gap-1 mt-4 text-gray-600 md:mb-2">
+              <span className="text-sm md:text-lg">
+                <strong>Category:</strong> {category}
               </span>
-              <span className="font-medium md:font-semibold text-sm md:text-lg">
-                Slot Available: {slotsAvailable}
+              <span className="text-sm md:text-lg">
+                <strong>Rating:</strong> {rating}
+              </span>
+            </div>
+
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1 mt-2 md:mt-4 text-gray-600 mb-2">
+              <span className="text-sm md:text-lg">
+                <strong>Provider:</strong> {providerName}
+              </span>
+              <span className="text-sm md:text-lg">
+                <strong>Email:</strong> {providerEmail}
+              </span>
+            </div>
+
+            {/* -------- Price & Slots ------- */}
+            <div className="flex flex-row justify-between items-start md:items-center gap-1 mt-4 text-gray-600">
+              <span className="text-sm md:text-lg">
+                <strong>Price:</strong> ${price}
+              </span>
+              <span className="text-sm md:text-lg">
+                <strong>Slot Available:</strong> {slotsAvailable}
               </span>
             </div>
           </div>
         </div>
       </div>
-      <div className="md:w-fit md:mx-auto mx-10 my-4 md:my-8 border-t-2 md:border-t-4 border-amber-200">
+      <div className="md:w-fit md:mx-auto mx-10 my-4 md:my-8 border-t-2 md:border-t-4 border-secondary/60">
         <BookService></BookService>
       </div>
     </div>

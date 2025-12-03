@@ -32,8 +32,8 @@ const WinterQuiz = () => {
   };
 
   return (
-    <section className="winter-quiz p-6 bg-sky-50 md:rounded shadow md:shadow-lg hover:shadow-xl transition-all duration-300 max-w-xl mx-auto mb-10 md:mb-14">
-      <h2 className="text-xl md:text-2xl font-bold mb-4 text-center">
+    <section className="winter-quiz p-6 md:p-10 bg-sky-50 md:rounded shadow md:shadow-lg hover:shadow-xl transition-all duration-300 max-w-2xl mx-auto mb-10 md:mb-14">
+      <h2 className="text-xl md:text-2xl font-bold mb-4 text-center text-primary">
         Is Your Pet Winter-Ready?
       </h2>
       <ul className="mb-2 md:mb-4 space-y-2 text-xs md:text-base">
@@ -56,7 +56,7 @@ const WinterQuiz = () => {
       <div className="text-center mt-4">
         <button
           onClick={handleCheck}
-          className="btn btn-secondary btn-sm md:btn-md"
+          className="btn btn-primary btn-sm md:btn-md md:px-10"
         >
           Check
         </button>
