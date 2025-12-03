@@ -7,7 +7,7 @@ The project focuses on clean UI, smooth animations, and responsive design for al
 
 ## 🌐 Live Demo
 
-🔗 **Live Site:** [https://astounding-semolina-7825f5.netlify.app/](https://astounding-semolina-7825f5.netlify.app/)
+🔗 **Live Site:** [https://petwarmpaws.netlify.app/](https://petwarmpaws.netlify.app/)
 
 ---
 
